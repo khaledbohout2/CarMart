@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Light.ttf">
+            <string>Poppins-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MapServicesVCs" customModule="CarMart" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="91" height="138"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="91" height="138"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jD6-cN-fIF">
+                        <rect key="frame" x="0.0" y="0.0" width="91" height="138"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group 386" translatesAutoresizingMaskIntoConstraints="NO" id="HVh-IW-Aqr">
+                                <rect key="frame" x="10" y="10" width="71" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HVh-IW-Aqr" secondAttribute="height" multiplier="1:1" id="TTC-8q-GRF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhM-We-nK2">
+                                <rect key="frame" x="30" y="121" width="31.5" height="17"/>
+                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HVh-IW-Aqr" secondAttribute="trailing" constant="10" id="HG6-gT-HWy"/>
+                            <constraint firstItem="lhM-We-nK2" firstAttribute="centerX" secondItem="jD6-cN-fIF" secondAttribute="centerX" id="HHd-Qg-a3U"/>
+                            <constraint firstAttribute="bottom" secondItem="lhM-We-nK2" secondAttribute="bottom" id="HRj-lY-pMA"/>
+                            <constraint firstItem="HVh-IW-Aqr" firstAttribute="leading" secondItem="jD6-cN-fIF" secondAttribute="leading" constant="10" id="K0u-5b-y6C"/>
+                            <constraint firstItem="HVh-IW-Aqr" firstAttribute="top" secondItem="jD6-cN-fIF" secondAttribute="top" constant="10" id="dDE-41-mTf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jD6-cN-fIF" secondAttribute="bottom" id="Hc1-Zw-Pja"/>
+                <constraint firstAttribute="trailing" secondItem="jD6-cN-fIF" secondAttribute="trailing" id="MQA-EO-ekf"/>
+                <constraint firstItem="jD6-cN-fIF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Osv-HD-9MD"/>
+                <constraint firstItem="jD6-cN-fIF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WqJ-yT-aBM"/>
+            </constraints>
+            <size key="customSize" width="91" height="138"/>
+            <point key="canvasLocation" x="3.6231884057971016" y="84.375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Mask Group 386" width="50" height="50"/>
+    </resources>
+</document>

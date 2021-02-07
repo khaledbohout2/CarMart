@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FeatureBrandsCollectionViewCell" customModule="CarMart" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="152" height="175"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="152" height="175"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7R-cM-Cq0">
+                        <rect key="frame" x="5" y="10" width="142" height="155"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path 27582" translatesAutoresizingMaskIntoConstraints="NO" id="8FE-AT-kpt">
+                                <rect key="frame" x="7.5" y="7.5" width="127" height="140"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.59607843137254901" green="0.74901960784313726" blue="0.83529411764705885" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8FE-AT-kpt" firstAttribute="leading" secondItem="W7R-cM-Cq0" secondAttribute="leading" constant="7.5" id="Bcw-C7-eGL"/>
+                            <constraint firstAttribute="bottom" secondItem="8FE-AT-kpt" secondAttribute="bottom" constant="7.5" id="ES1-tS-fGg"/>
+                            <constraint firstItem="8FE-AT-kpt" firstAttribute="centerX" secondItem="W7R-cM-Cq0" secondAttribute="centerX" id="QWk-Lp-UAV"/>
+                            <constraint firstAttribute="trailing" secondItem="8FE-AT-kpt" secondAttribute="trailing" constant="7.5" id="YaC-75-eWS"/>
+                            <constraint firstItem="8FE-AT-kpt" firstAttribute="centerY" secondItem="W7R-cM-Cq0" secondAttribute="centerY" id="gKt-7d-Sr1"/>
+                            <constraint firstItem="8FE-AT-kpt" firstAttribute="top" secondItem="W7R-cM-Cq0" secondAttribute="top" constant="7.5" id="rWq-8U-6jw"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="W7R-cM-Cq0" secondAttribute="bottom" constant="10" id="IT8-ZH-ivQ"/>
+                <constraint firstItem="W7R-cM-Cq0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="l80-8m-n2c"/>
+                <constraint firstAttribute="trailing" secondItem="W7R-cM-Cq0" secondAttribute="trailing" constant="5" id="oZV-Ul-iDe"/>
+                <constraint firstItem="W7R-cM-Cq0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="xaU-Si-wfq"/>
+            </constraints>
+            <size key="customSize" width="152" height="175"/>
+            <connections>
+                <outlet property="brandImageView" destination="8FE-AT-kpt" id="aCi-xs-yc9"/>
+                <outlet property="mainView" destination="W7R-cM-Cq0" id="5YP-OZ-MMU"/>
+            </connections>
+            <point key="canvasLocation" x="-294.20289855072468" y="36.495535714285715"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Path 27582" width="35.5" height="35.5"/>
+    </resources>
+</document>
