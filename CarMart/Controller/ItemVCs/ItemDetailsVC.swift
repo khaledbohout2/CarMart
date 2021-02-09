@@ -12,6 +12,7 @@ class ItemDetailsVC: UIViewController {
     @IBOutlet weak var pannersCollectionView: UICollectionView!
     @IBOutlet weak var pannersPageControl: UIPageControl!
     @IBOutlet weak var imagesCollectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +58,11 @@ extension ItemDetailsVC: UICollectionViewDelegate, UICollectionViewDataSource, U
        return CGSize(width: collectionView.frame.width / 3, height: collectionView.frame.width / 3)
     }
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        pageControl.currentPage = Int(indexPath.row)
     }
     
     

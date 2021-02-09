@@ -289,8 +289,8 @@ class HomeVC: UIViewController {
     
     @IBAction func viewAllCategoriesBtnTapped(_ sender: Any) {
         
-        let storiBoard = UIStoryboard(name: "Main", bundle: nil)
-        let categoriesListVC = storiBoard.instantiateViewController(withIdentifier: "CategoriesVC") as! CategoriesVC
+        let storiBoard = UIStoryboard(name: "Home", bundle: nil)
+        let categoriesListVC = storiBoard.instantiateViewController(withIdentifier: "ExploreAllVC") as! CategoriesVC
         self.navigationController?.pushViewController(categoriesListVC, animated: true)
     }
     
@@ -306,22 +306,11 @@ class HomeVC: UIViewController {
         let itemsListVC = storiBoard.instantiateViewController(withIdentifier: "ItemsListVC") as! ItemsListVC
       //  paidOffersListVC.type = "free"
         self.navigationController?.pushViewController(itemsListVC, animated: true)
+        
     }
     
-    /**
-           this IBAction calls when user tapps view All paid offers button
-           - Parameters:
-           - sender : the button that intiate the action.
-           */
-    
-    
-    @IBAction func viewAllPaidOffersBtnTapped(_ sender: Any) {
-//
-//        let storiBoard = UIStoryboard(name: "Lists", bundle: nil)
-//        let paidOffersListVC = storiBoard.instantiateViewController(withIdentifier: "PaidOffersListVC") as! PaidOffersListVC
-//        paidOffersListVC.type = "paid"
-//        self.navigationController?.pushViewController(paidOffersListVC, animated: true)
-    }
+  
+
     
     /**
            this IBAction calls when user tapps view All Featured Brands button
@@ -332,9 +321,9 @@ class HomeVC: UIViewController {
     
     @IBAction func viewAllFeaturedBrands(_ sender: Any) {
         
-//        let storiBoard = UIStoryboard(name: "Lists", bundle: nil)
-//        let brandsListVC = storiBoard.instantiateViewController(withIdentifier: "BrandsListVC") as! BrandsListVC
-//        self.navigationController?.pushViewController(brandsListVC, animated: true)
+        let storiBoard = UIStoryboard(name: "Lists", bundle: nil)
+        let brandsListVC = storiBoard.instantiateViewController(withIdentifier: "BrandsVC") as! BrandsVC
+        self.navigationController?.pushViewController(brandsListVC, animated: true)
         
     }
     
@@ -344,12 +333,12 @@ class HomeVC: UIViewController {
            - sender : the button that intiate the action.
            */
     
-    @IBAction func viewAllHotOffersTapped(_ sender: Any) {
+    @IBAction func viewAllNewArrivalsTapped(_ sender: Any) {
         
-//        let storiBoard = UIStoryboard(name: "Lists", bundle: nil)
-//        let paidOffersListVC = storiBoard.instantiateViewController(withIdentifier: "PaidOffersListVC") as! PaidOffersListVC
-//        paidOffersListVC.type = "free"
-//        self.navigationController?.pushViewController(paidOffersListVC, animated: true)
+        let storiBoard = UIStoryboard(name: "Item", bundle: nil)
+        let itemsListVC = storiBoard.instantiateViewController(withIdentifier: "ItemsListVC") as! ItemsListVC
+      //  paidOffersListVC.type = "free"
+        self.navigationController?.pushViewController(itemsListVC, animated: true)
     }
     
 }

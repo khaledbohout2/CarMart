@@ -58,7 +58,9 @@ class CategoriesVC: UIViewController {
     
     @IBAction func homeBtnTapped(_ sender: Any) {
         
-        self.navigationController?.popViewController(animated: true)
+        let storyBaord = UIStoryboard(name: "Home", bundle: nil)
+        let homeVC = storyBaord.instantiateViewController(withIdentifier: "HomeVC")
+        self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
     }
@@ -92,8 +94,8 @@ class CategoriesVC: UIViewController {
          //   FastMaintenanceVC
             
             let storiBoard = UIStoryboard(name: "Home", bundle: nil)
-            let fastMaintenanceVC = storiBoard.instantiateViewController(withIdentifier: "FastMaintenanceVC") as! FastMaintenanceVC
-            self.navigationController?.pushViewController(fastMaintenanceVC, animated: true)
+            let maintainingCenteresVC = storiBoard.instantiateViewController(withIdentifier: "MaintainingCenteresVC") as! MaintainingCenteresVC
+            self.navigationController?.pushViewController(maintainingCenteresVC, animated: true)
         }
     }
 

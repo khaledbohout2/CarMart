@@ -115,10 +115,10 @@ class ChooseServiceVC: UIViewController {
     
     @IBAction func enterBtnTapped(_ sender: Any) {
         
-//        let storyBaord = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyBaord.instantiateViewController(withIdentifier: "CategoriesVC")
-//        
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let storyBaord = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBaord.instantiateViewController(withIdentifier: "HomeTBC")
+        vc.modalPresentationStyle =  .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
 }
@@ -147,6 +147,14 @@ extension ChooseServiceVC: UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        //item
+        
+      //  BookOfferVC
+        
+        let storyBaord = UIStoryboard(name: "Item", bundle: nil)
+        let bookOfferVC = storyBaord.instantiateViewController(withIdentifier: "BookOfferVC")
+        
+        self.navigationController?.pushViewController(bookOfferVC, animated: true)
     }
     
     

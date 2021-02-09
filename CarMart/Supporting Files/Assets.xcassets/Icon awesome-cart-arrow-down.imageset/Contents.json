@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Icon awesome-cart-arrow-down.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Icon awesome-cart-arrow-down@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Icon awesome-cart-arrow-down@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -43,6 +43,10 @@ class LoginVC: UIViewController {
                 
             } else {
                 
+                let storyBaord = UIStoryboard(name: "Main", bundle: nil)
+                let chooseServiceVC = storyBaord.instantiateViewController(withIdentifier: "ChooseServiceVC") as! ChooseServiceVC
+                self.navigationController?.pushViewController(chooseServiceVC, animated: true)
+                self.present(chooseServiceVC, animated: true, completion: nil)
             }
         }
         

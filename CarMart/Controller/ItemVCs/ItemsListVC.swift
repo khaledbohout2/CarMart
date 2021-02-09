@@ -53,6 +53,13 @@ extension ItemsListVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     }
     return cell
   }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let storiBoard = UIStoryboard(name: "Item", bundle: nil)
+        let itemDetailsVC = storiBoard.instantiateViewController(withIdentifier: "ItemDetailsVC") as! ItemDetailsVC
+        self.navigationController?.pushViewController(itemDetailsVC, animated: true)
+    }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let itemSize = (collectionView.frame.width - (collectionView.contentInset.left + collectionView.contentInset.right + 10)) / 2
