@@ -30,9 +30,8 @@ class LoginVC: UIViewController {
         if passShown {
             
             let storyBaord = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyBaord.instantiateViewController(withIdentifier: "HomeTBC")
-            vc.modalPresentationStyle =  .fullScreen
-            self.present(vc, animated: true, completion: nil)
+            let categoriesVC = storyBaord.instantiateViewController(withIdentifier: "CategoriesVC")
+            self.navigationController?.pushViewController(categoriesVC, animated: true)
             
         } else {
             

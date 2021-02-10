@@ -58,9 +58,16 @@ class CategoriesVC: UIViewController {
     
     @IBAction func homeBtnTapped(_ sender: Any) {
         
-        let storyBaord = UIStoryboard(name: "Home", bundle: nil)
-        let homeVC = storyBaord.instantiateViewController(withIdentifier: "HomeVC")
-        self.navigationController?.pushViewController(homeVC, animated: true)
+        
+        
+//        let storyBaord = UIStoryboard(name: "Home", bundle: nil)
+//        let homeVC = storyBaord.instantiateViewController(withIdentifier: "HomeVC")
+//        self.navigationController?.pushViewController(homeVC, animated: true)
+        
+        let storyBaord = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBaord.instantiateViewController(withIdentifier: "HomeTBC")
+        vc.modalPresentationStyle =  .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     }
@@ -93,9 +100,27 @@ class CategoriesVC: UIViewController {
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
          //   FastMaintenanceVC
             
-            let storiBoard = UIStoryboard(name: "Home", bundle: nil)
-            let maintainingCenteresVC = storiBoard.instantiateViewController(withIdentifier: "MaintainingCenteresVC") as! MaintainingCenteresVC
-            self.navigationController?.pushViewController(maintainingCenteresVC, animated: true)
+            if indexPath.row == 0 {
+                
+                let storiBoard = UIStoryboard(name: "Home", bundle: nil)
+                let maintainingCenteresVC = storiBoard.instantiateViewController(withIdentifier: "WinchListVC") as! WinchListVC
+                self.navigationController?.pushViewController(maintainingCenteresVC, animated: true)
+                
+            } else if indexPath.row == 1 {
+                
+                let storiBoard = UIStoryboard(name: "Home", bundle: nil)
+                let maintainingCenteresVC = storiBoard.instantiateViewController(withIdentifier: "MaintainingCenteresVC") as! MaintainingCenteresVC
+                self.navigationController?.pushViewController(maintainingCenteresVC, animated: true)
+
+            } else if indexPath.row == 2 {
+                
+                let storiBoard = UIStoryboard(name: "Item", bundle: nil)
+                let carWashDetailsVc = storiBoard.instantiateViewController(withIdentifier: "CarWashDetailsVc") as! CarWashDetailsVc
+                self.navigationController?.pushViewController(carWashDetailsVc, animated: true)
+                
+            }
+            
+
         }
     }
 

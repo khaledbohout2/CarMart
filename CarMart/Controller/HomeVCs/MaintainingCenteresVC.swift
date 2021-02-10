@@ -17,6 +17,8 @@ class MaintainingCenteresVC: UIViewController {
         super.viewDidLoad()
 
         setUpCollectionView()
+        
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     func setUpCollectionView() {

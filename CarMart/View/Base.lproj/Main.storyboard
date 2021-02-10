@@ -1001,7 +1001,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNu-Kq-GMk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4015.1999999999998" y="63.546798029556655"/>
+            <point key="canvasLocation" x="3817" y="59"/>
         </scene>
         <!--Circle Bar Controller-->
         <scene sceneID="YCB-xP-CYh">
@@ -1031,10 +1031,10 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="ptH-Iz-IFj" kind="relationship" relationship="viewControllers" id="xfb-MM-2Ii"/>
                         <segue destination="MqC-Et-Euh" kind="relationship" relationship="viewControllers" id="JkN-Bh-dSa"/>
                         <segue destination="kHH-HV-dKl" kind="relationship" relationship="viewControllers" id="wUH-4D-kyv"/>
                         <segue destination="1rd-RP-N2j" kind="relationship" relationship="viewControllers" id="n8y-YM-JIL"/>
+                        <segue destination="i21-Ut-6CQ" kind="relationship" relationship="viewControllers" id="DvQ-zP-anZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jp0-ge-sEg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1051,15 +1051,25 @@
             </objects>
             <point key="canvasLocation" x="3327" y="543"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Map-->
         <scene sceneID="pni-c8-voA">
             <objects>
-                <viewControllerPlaceholder id="kHH-HV-dKl" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Map" id="kHH-HV-dKl" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ddW-rO-buR"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWR-eI-Epw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3562" y="542"/>
+        </scene>
+        <!--MyCart-->
+        <scene sceneID="HWB-1S-rdD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyCart" id="i21-Ut-6CQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="MK0-b4-FVA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Buj-bK-CR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3761" y="584"/>
         </scene>
         <!--Profile-->
         <scene sceneID="TwW-rt-Ex7">
@@ -1070,50 +1080,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xn-UW-sgY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3985" y="544"/>
-        </scene>
-        <!--Location Search Table-->
-        <scene sceneID="xfJ-Z0-IZl">
-            <objects>
-                <tableViewController storyboardIdentifier="LocationSearchTable" id="ghH-4K-nYj" customClass="LocationSearchTable" customModule="CarMart" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lue-SN-CHC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="47g-xZ-Esb" detailTextLabel="p27-FO-Q8s" style="IBUITableViewCellStyleSubtitle" id="sQ4-ZE-LaS">
-                                <rect key="frame" x="0.0" y="28" width="375" height="55.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sQ4-ZE-LaS" id="eBX-3b-U0d">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="47g-xZ-Esb">
-                                            <rect key="frame" x="16" y="8.9999999999999982" width="33" height="20.333333333333332"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p27-FO-Q8s">
-                                            <rect key="frame" x="15.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ghH-4K-nYj" id="cGW-8b-CXU"/>
-                            <outlet property="delegate" destination="ghH-4K-nYj" id="Aio-IH-qYn"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="utW-xh-vV3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7170" y="64"/>
         </scene>
         <!--CategoriesVC-->
         <scene sceneID="SxX-xY-acM">
@@ -1356,145 +1322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXo-eJ-H5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5742" y="63"/>
-        </scene>
-        <!--Services On MapVC-->
-        <scene sceneID="AkR-6N-Cae">
-            <objects>
-                <viewController id="mdh-GP-GHm" customClass="ServicesOnMapVC" customModule="CarMart" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="r5M-8F-xOh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSz-QT-F8c">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0W3-Cm-RdB" customClass="AnimatableView" customModule="IBAnimatable">
-                                        <rect key="frame" x="0.0" y="498" width="375" height="280"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zto-zQ-zW3">
-                                                <rect key="frame" x="157.66666666666666" y="10" width="60" height="6"/>
-                                                <color key="backgroundColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="L7y-VF-BjK"/>
-                                                    <constraint firstAttribute="height" constant="6" id="cqa-er-9dQ"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pickup address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjf-Z4-b5N">
-                                                <rect key="frame" x="16" y="35" width="91.333333333333329" height="17"/>
-                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
-                                                <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCp-xq-GHO">
-                                                <rect key="frame" x="16" y="60" width="344" height="45"/>
-                                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="30g-Pe-SqR"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rz4-nj-0u5">
-                                                <rect key="frame" x="16" y="220" width="343" height="45"/>
-                                                <color key="backgroundColor" red="0.082352941176470587" green="0.31372549019607843" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="gGL-Bl-R5h"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
-                                                <state key="normal" title="Start">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="startBtnTapped:" destination="mdh-GP-GHm" eventType="touchUpInside" id="nd6-uo-jr9"/>
-                                                </connections>
-                                            </button>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="H7R-Re-8yC">
-                                                <rect key="frame" x="20" y="115" width="335" height="85"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="k70-d3-G8b">
-                                                    <size key="itemSize" width="128" height="128"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                </collectionViewFlowLayout>
-                                                <cells/>
-                                            </collectionView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="rjf-Z4-b5N" firstAttribute="top" secondItem="0W3-Cm-RdB" secondAttribute="top" constant="35" id="2eC-gZ-vNi"/>
-                                            <constraint firstAttribute="trailing" secondItem="NCp-xq-GHO" secondAttribute="trailing" constant="15" id="40B-0G-Mv8"/>
-                                            <constraint firstItem="H7R-Re-8yC" firstAttribute="top" secondItem="NCp-xq-GHO" secondAttribute="bottom" constant="10" id="5sr-ae-icw"/>
-                                            <constraint firstAttribute="bottom" secondItem="rz4-nj-0u5" secondAttribute="bottom" constant="15" id="7xc-y4-XYf"/>
-                                            <constraint firstItem="zto-zQ-zW3" firstAttribute="top" secondItem="0W3-Cm-RdB" secondAttribute="top" constant="10" id="BzD-CG-xg4"/>
-                                            <constraint firstItem="rz4-nj-0u5" firstAttribute="leading" secondItem="0W3-Cm-RdB" secondAttribute="leading" constant="16" id="PZK-JB-wg5"/>
-                                            <constraint firstAttribute="height" constant="280" id="dDx-Ec-kKV"/>
-                                            <constraint firstItem="zto-zQ-zW3" firstAttribute="centerX" secondItem="0W3-Cm-RdB" secondAttribute="centerX" id="djN-rU-J6V"/>
-                                            <constraint firstAttribute="trailing" secondItem="H7R-Re-8yC" secondAttribute="trailing" constant="20" id="h2a-8j-4Jv"/>
-                                            <constraint firstAttribute="trailing" secondItem="rz4-nj-0u5" secondAttribute="trailing" constant="16" id="ktU-Zb-gkf"/>
-                                            <constraint firstItem="NCp-xq-GHO" firstAttribute="top" secondItem="rjf-Z4-b5N" secondAttribute="bottom" constant="8" id="pVX-WR-2SR"/>
-                                            <constraint firstItem="NCp-xq-GHO" firstAttribute="leading" secondItem="rjf-Z4-b5N" secondAttribute="leading" id="sGl-jv-V6S"/>
-                                            <constraint firstItem="rz4-nj-0u5" firstAttribute="top" secondItem="H7R-Re-8yC" secondAttribute="bottom" constant="20" id="v7w-Ww-mQC"/>
-                                            <constraint firstItem="rjf-Z4-b5N" firstAttribute="leading" secondItem="0W3-Cm-RdB" secondAttribute="leading" constant="16" id="vA0-ET-e30"/>
-                                            <constraint firstItem="H7R-Re-8yC" firstAttribute="leading" secondItem="0W3-Cm-RdB" secondAttribute="leading" constant="20" id="w2U-id-dxt"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="_cornerSides" value="topLeft, topRight"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4Qr-kE-uig">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
-                                    </mapView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.082352941176470587" green="0.31372549019607843" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="0W3-Cm-RdB" secondAttribute="bottom" id="66M-t1-nvI"/>
-                                    <constraint firstItem="0W3-Cm-RdB" firstAttribute="top" secondItem="4Qr-kE-uig" secondAttribute="bottom" id="BLY-Yx-wBF"/>
-                                    <constraint firstAttribute="trailing" secondItem="4Qr-kE-uig" secondAttribute="trailing" id="N9c-zb-aMV"/>
-                                    <constraint firstItem="4Qr-kE-uig" firstAttribute="leading" secondItem="iSz-QT-F8c" secondAttribute="leading" id="bnA-E0-5uS"/>
-                                    <constraint firstItem="4Qr-kE-uig" firstAttribute="top" secondItem="iSz-QT-F8c" secondAttribute="top" id="g9Y-bp-urn"/>
-                                    <constraint firstAttribute="trailing" secondItem="0W3-Cm-RdB" secondAttribute="trailing" id="mhV-N5-Di7"/>
-                                    <constraint firstItem="0W3-Cm-RdB" firstAttribute="leading" secondItem="iSz-QT-F8c" secondAttribute="leading" id="vhL-F2-ug8"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="UuI-Ji-oHW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="iSz-QT-F8c" firstAttribute="leading" secondItem="UuI-Ji-oHW" secondAttribute="leading" id="LEE-sz-Rmj"/>
-                            <constraint firstItem="UuI-Ji-oHW" firstAttribute="trailing" secondItem="iSz-QT-F8c" secondAttribute="trailing" id="tSQ-pk-w7a"/>
-                            <constraint firstItem="iSz-QT-F8c" firstAttribute="top" secondItem="r5M-8F-xOh" secondAttribute="top" id="vVf-Uc-nYE"/>
-                            <constraint firstItem="UuI-Ji-oHW" firstAttribute="bottom" secondItem="iSz-QT-F8c" secondAttribute="bottom" id="yeT-Fu-la2"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="addressTextField" destination="NCp-xq-GHO" id="vYe-Em-g9g"/>
-                        <outlet property="mapView" destination="4Qr-kE-uig" id="WRp-XG-XY0"/>
-                        <outlet property="servicesCollectionView" destination="H7R-Re-8yC" id="5nM-qd-PYE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uzf-wP-hPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6445.6000000000004" y="61.330049261083744"/>
+            <point key="canvasLocation" x="4575" y="60"/>
         </scene>
     </scenes>
     <designables>

@@ -33,13 +33,20 @@ class ItemDetailsVC: UIViewController {
         imagesCollectionView.dataSource = self
         
     }
-
+    
+    
+    @IBAction func addToCartBtn(_ sender: Any) {
+        
+        
+    }
+    
 
 }
 
 extension ItemDetailsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return 3
     }
     

@@ -35,8 +35,8 @@ class ProfileVC: UITableViewController {
                 
             } else if indexPath.row == 2 {
                 
-                let storiBoard = UIStoryboard(name: "Item", bundle: nil)
-                let categoriesListVC = storiBoard.instantiateViewController(withIdentifier: "CartVC")
+                let storiBoard = UIStoryboard(name: "Profile", bundle: nil)
+                let categoriesListVC = storiBoard.instantiateViewController(withIdentifier: "Notifications")
                 self.navigationController?.pushViewController(categoriesListVC, animated: true)
                 
             } else if indexPath.row == 3 {

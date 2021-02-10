@@ -290,7 +290,7 @@ class HomeVC: UIViewController {
     @IBAction func viewAllCategoriesBtnTapped(_ sender: Any) {
         
         let storiBoard = UIStoryboard(name: "Home", bundle: nil)
-        let categoriesListVC = storiBoard.instantiateViewController(withIdentifier: "ExploreAllVC") as! CategoriesVC
+        let categoriesListVC = storiBoard.instantiateViewController(withIdentifier: "ExploreAllVC") as! ExploreAllVC
         self.navigationController?.pushViewController(categoriesListVC, animated: true)
     }
     

@@ -15,5 +15,7 @@ class WinchDetailsVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func nextBtnTapped(_ sender: Any) {
+    }
+    
 }
