@@ -13,13 +13,13 @@ class Toast {
     static func show(message: String, controller: UIViewController) {
         
         let toastContainer = UIView(frame: CGRect())
-        toastContainer.backgroundColor = hexStringToUIColor(hex: "#FBE159")
+        toastContainer.backgroundColor = hexStringToUIColor(hex: "#1550C0")
         toastContainer.alpha = 0.0
         toastContainer.layer.cornerRadius = 8;
         toastContainer.clipsToBounds  =  true
 
         let toastLabel = UILabel(frame: CGRect())
-        toastLabel.textColor = hexStringToUIColor(hex: "#282828")
+        toastLabel.textColor = hexStringToUIColor(hex: "#FFFFFF")
         toastLabel.textAlignment = .center;
         if UIDevice.current.userInterfaceIdiom == .pad {
             

@@ -10,18 +10,6 @@ import UIKit
 import SystemConfiguration
 import Gifu
 
-func startLoading(viewController: UIViewController) {
-    
-    let image = GIFImageView()
-    image.animate(withGIFNamed: "GPless--logo-gif")
-    viewController.view.addSubview(image)
-    image.center = CGPoint(x: viewController.view.frame.size.width/2, y:
-                            viewController.view.frame.size.height/2)
-    image.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-    image.contentMode = .scaleAspectFit
-}
-
-
 func getCurrentDate() -> String {
     let today = Date()
     let formatter = DateFormatter()
@@ -38,67 +26,6 @@ func getLastWeakDate() -> String {
     formatter.dateFormat = "yyyy-MM-dd"
     return (formatter.string(from: lastWeekDate))
 }
-
-//
-//func makeTopCornerRadius(myView: UIView) {
-//    
-//    let rectShape = CAShapeLayer()
-//    rectShape.bounds = myView.frame
-//    rectShape.position = myView.center
-//    rectShape.path = UIBezierPath(roundedRect: myView.bounds, byRoundingCorners: [.topRight, .topLeft], cornerRadii: CGSize(width: 50, height: 50)).cgPath
-//
-//   //  myView.layer.backgroundColor = UIColor.green.cgColor
-//    //Here I'm masking the textView's layer with rectShape layer
-//     myView.layer.mask = rectShape
-//}
-//
-//func makeCornerRadius(myView: UIView) {
-//    
-//    let rectShape = CAShapeLayer()
-//    rectShape.bounds = myView.frame
-//    rectShape.position = myView.center
-//    rectShape.path = UIBezierPath(roundedRect: myView.bounds, byRoundingCorners: [.bottomRight, .bottomLeft, .topLeft, .topRight], cornerRadii: CGSize(width: 20, height: 20)).cgPath
-//
-//   //  myView.layer.backgroundColor = UIColor.green.cgColor
-//    //Here I'm masking the textView's layer with rectShape layer
-//     myView.layer.mask = rectShape
-//}
-//
-//func makeBottomCornerRadius(myView: UIView) {
-//    
-//    let rectShape = CAShapeLayer()
-//    rectShape.bounds = myView.frame
-//    rectShape.position = myView.center
-//    rectShape.path = UIBezierPath(roundedRect: myView.bounds, byRoundingCorners: [.bottomRight, .bottomLeft], cornerRadii: CGSize(width: 50, height: 50)).cgPath
-//
-//   //  myView.layer.backgroundColor = UIColor.green.cgColor
-//    //Here I'm masking the textView's layer with rectShape layer
-//     myView.layer.mask = rectShape
-//}
-//
-//func makeBottomCornerRadiusWithNum(myView: UIView, num: Int) {
-//    
-//    let rectShape = CAShapeLayer()
-//    rectShape.bounds = myView.frame
-//    rectShape.position = myView.center
-//    rectShape.path = UIBezierPath(roundedRect: myView.bounds, byRoundingCorners: [.bottomRight, .bottomLeft], cornerRadii: CGSize(width: num, height: num)).cgPath
-//
-//   //  myView.layer.backgroundColor = UIColor.green.cgColor
-//    //Here I'm masking the textView's layer with rectShape layer
-//     myView.layer.mask = rectShape
-//}
-//
-//func makeTopRightCornerRadiusWithNum(myView: UIView, num: Int) {
-//    
-//    let rectShape = CAShapeLayer()
-//    rectShape.bounds = myView.frame
-//    rectShape.position = myView.center
-//    rectShape.path = UIBezierPath(roundedRect: myView.bounds, byRoundingCorners: [.topRight], cornerRadii: CGSize(width: num, height: num)).cgPath
-//
-//   //  myView.layer.backgroundColor = UIColor.green.cgColor
-//    //Here I'm masking the textView's layer with rectShape layer
-//     myView.layer.mask = rectShape
-//}
 
 func hexStringToUIColor (hex:String) -> UIColor {
     var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
@@ -122,7 +49,7 @@ func hexStringToUIColor (hex:String) -> UIColor {
     )
 }
 
- func getUserData() -> Bool{
+ func getUserData() -> Bool {
     let def = UserDefaults.standard
     return (def.object(forKey: "accessToken") as? String) != nil
 }
@@ -166,6 +93,24 @@ func getUserMobile() -> String {
     
     let def = UserDefaults.standard
     return def.object(forKey: "phone") as? String ?? "0"
+}
+
+func saveLoginUser(user: LoginResponse) {
+    
+    print(user)
+    
+    let def = UserDefaults.standard
+    
+    def.setValue(user.token, forKey: "accessToken")
+    
+    def.setValue(user.id, forKey: "id")
+    
+    def.setValue(user.userName, forKey: "userName")
+    
+    def.setValue(user.profileImage, forKey: "profileImage")
+    
+    def.synchronize()
+    
 }
 
 //func setUserData(user: User) {
@@ -248,51 +193,6 @@ func logout(){
 }
 
 
-func addLoadingView(mySubview: UIView, loaderGif: GIFImageView, view: UIView) {
-    
-    mySubview.backgroundColor = UIColor.white
-    
-    // 1.
-    view.addSubview(mySubview)
-    mySubview.addSubview(loaderGif)
-    loaderGif.animate(withGIFNamed: "GPless--logo-gif")
-
-    // 2. For example:
-    loaderGif.translatesAutoresizingMaskIntoConstraints = false
-    
-    if UIDevice.current.userInterfaceIdiom == .pad {
-        
-        NSLayoutConstraint.activate([
-            loaderGif.widthAnchor.constraint(equalToConstant: 110),
-            loaderGif.heightAnchor.constraint(equalToConstant: 135),
-            loaderGif.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            loaderGif.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
-        ])
-
-        
-    } else {
-        
-        NSLayoutConstraint.activate([
-            loaderGif.widthAnchor.constraint(equalToConstant: 90),
-            loaderGif.heightAnchor.constraint(equalToConstant: 100),
-            loaderGif.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            loaderGif.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
-        ])
-
-    }
-    
-
-    
-    
-    mySubview.translatesAutoresizingMaskIntoConstraints = false
-    NSLayoutConstraint.activate([
-        mySubview.widthAnchor.constraint(equalToConstant: view.frame.width),
-        mySubview.heightAnchor.constraint(equalToConstant: view.frame.height),
-        mySubview.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-        mySubview.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor)
-    ])
-}
-
 public class Reachable  {
     
     class func isConnectedToNetwork() -> Bool {
@@ -347,31 +247,5 @@ public class Reachable  {
         return components!
     }
     
-
-    
-
-    
 }
 
-extension UIView {
-    
-    // Example use: myView.addBorder(toSide: .Left, withColor: UIColor.redColor().CGColor, andThickness: 1.0)
-    
-    enum ViewSide {
-        case Left, Right, Top, Bottom
-    }
-    
-    func addBorder(toSide side: ViewSide, andThickness thickness: CGFloat) {
-        
-        let border = CALayer()
-        
-        
-         border.frame = CGRect(x: frame.minX, y: frame.minY, width: thickness, height: frame.height)
-        
-        border.frame = CGRect(x: frame.maxX, y: frame.minY, width: thickness, height: frame.height)
-
-        
-        
-        layer.addSublayer(border)
-    }
-}

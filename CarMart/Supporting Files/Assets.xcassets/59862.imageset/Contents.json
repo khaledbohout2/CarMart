@@ -1,0 +1,26 @@
+{
+  "images" : [
+    {
+      "filename" : "59862 [Converted].png",
+      "idiom" : "universal",
+      "locale" : "Converted",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "59862 [Converted]@2x.png",
+      "idiom" : "universal",
+      "locale" : "Converted",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "59862 [Converted]@3x.png",
+      "idiom" : "universal",
+      "locale" : "Converted",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

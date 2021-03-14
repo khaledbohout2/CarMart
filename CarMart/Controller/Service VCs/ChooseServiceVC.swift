@@ -22,6 +22,10 @@ class ChooseServiceVC: UIViewController {
     var colorDropDown = DropDown()
     var yearDropDown = DropDown()
     
+    var care: String?
+    var color: String?
+    var year: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,6 +65,7 @@ class ChooseServiceVC: UIViewController {
             
             
             self?.careDropDownBtn.setTitle(item, for: .normal)
+            self!.care = item
         }
     }
     
@@ -78,6 +83,7 @@ class ChooseServiceVC: UIViewController {
             }
             
             self?.colorDropDownBtn.setTitle(item, for: .normal)
+            self?.color = item
         }
     }
     
@@ -95,6 +101,7 @@ class ChooseServiceVC: UIViewController {
             }
             
             self?.yearDropDownBtn.setTitle(item, for: .normal)
+            self?.year = item
         }
     }
     
@@ -158,4 +165,23 @@ extension ChooseServiceVC: UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     
+}
+
+//MARK:- APIs
+
+extension ChooseServiceVC {
+    
+    func registerUser() {
+        
+        let randomInt = Int.random(in: 1..<5)
+        
+        let name = nameTxtField.text
+        let phone = phoneNumTxtField.text
+        let care = self.care
+        let color = self.color
+        let year = self.year
+        let accountName = randomInt
+        
+        
+    }
 }

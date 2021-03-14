@@ -41,26 +41,27 @@ class BrandsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        localize()
+     //   localize()
         
         initCollectionView()
         
         setUpNavigation()
         
-        if Reachable.isConnectedToNetwork() {
-            
-            addLoadingView(mySubview: mySubview, loaderGif: loaderGIF, view: view)
-            
-      //  getBrands()
-    //    getFeaturedBrands()
-            
-        } else {
-            
-            Toast.show(message: "noInternet".localizableString(), controller: self)
-        }
+//        if Reachable.isConnectedToNetwork() {
+//            
+//            addLoadingView(mySubview: mySubview, loaderGif: loaderGIF, view: view)
+//            
+//      //  getBrands()
+//    //    getFeaturedBrands()
+//            
+//        } else {
+//            
+//            Toast.show(message: "noInternet".localizableString(), controller: self)
+//        }
     }
     
     override func viewDidLayoutSubviews() {
+        
         super.viewDidLayoutSubviews()
         let height = BrandsColectionView.collectionViewLayout.collectionViewContentSize.height
         collectionViewHeight.constant = height
@@ -100,36 +101,46 @@ class BrandsVC: UIViewController {
     
     func setUpNavigation() {
         
+    //    navigationController?.navigationBar.prefersLargeTitles = true
+
+        if #available(iOS 13.0, *) {
+            
+            let appearance = UINavigationBarAppearance()
+            
+            appearance.backgroundColor = hexStringToUIColor(hex: "#204BF6")
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+         //   appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+            navigationController?.navigationBar.tintColor = .white
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.compactAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
+            
+        } else {
+            // Fallback on earlier versions
+                self.navigationController?.navigationBar.backgroundColor = hexStringToUIColor(hex: "#204BF6")
+        }
+
+
         let fontSize: CGFloat
-        
+
         if self.view.frame.width > 500 {
             fontSize = 27
         } else {
             fontSize = 18
         }
-        
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Regular".localizableString(), size: fontSize)!, NSAttributedString.Key.foregroundColor:hexStringToUIColor(hex: "#282828")]
-        
-        navigationController?.navigationBar.clipsToBounds = true
-        self.navigationController?.navigationBar.backgroundColor = hexStringToUIColor(hex: "#FFFFFF")
-        navigationController?.navigationBar.barTintColor = hexStringToUIColor(hex: "#FFFFFF")
-        
-        navigationController?.view.backgroundColor = hexStringToUIColor(hex: "#FFFFFF")
-        
+//
 
-        self.title = "brands".localizableString()
-        self.navigationController?.navigationBar.isHidden = false
-        self.navigationItem.setHidesBackButton(true, animated: true)
+            self.navigationItem.title = "notifications".localizableString()
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: hexStringToUIColor(hex: "#FFFFFF"),
+                                                                            NSAttributedString.Key.font: UIFont(name: "Poppins-Regular".localizableString(), size: fontSize)!]
+
+
         
-        let back = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(backTapped))
-        back.image = UIImage(named: "ArrowLeft".localizableString())
-        back.tintColor = hexStringToUIColor(hex: "#000000")
-        navigationItem.leftBarButtonItem = back
-        
-//        let search = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(searchTapped))
-//        search.image = UIImage(named: "navigationSearch")
-//        search.tintColor = hexStringToUIColor(hex: "")
-//        navigationItem.rightBarButtonItem = search
+//        let backBtn = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(backTapped))
+//        backBtn.image = UIImage(named: "ArrowLeft".localizableString())
+//        backBtn.tintColor = hexStringToUIColor(hex: "#000000")
+//        navigationItem.leftBarButtonItem = backBtn
         
     }
     
@@ -156,6 +167,7 @@ class BrandsVC: UIViewController {
            */
     
     @objc func backTapped() {
+        
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -215,12 +227,15 @@ extension BrandsVC: UICollectionViewDelegate,UICollectionViewDataSource, UIColle
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == bannersCollectionView {
+            
+            return 3
         
-        return featuredBrands.count
+     //   return featuredBrands.count
             
         } else {
             
-            return brands.count
+            return 3
+          //  return brands.count
         }
     }
     
@@ -230,16 +245,16 @@ extension BrandsVC: UICollectionViewDelegate,UICollectionViewDataSource, UIColle
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannersCollectionViewCell", for: indexPath) as! BannersCollectionViewCell
             
-        let photoLink = featuredBrands[indexPath.row].bannerPhoto ?? ""
-            print(photoLink)
-                        cell.bannerImageView.sd_setImage(with: URL(string: (SharedSettings.shared.settings?.setting?.bannersLink ?? "") + "/" + photoLink), placeholderImage: UIImage(named: "placeholder"), options: [.fromLoaderOnly])
+//        let photoLink = featuredBrands[indexPath.row].bannerPhoto ?? ""
+//            print(photoLink)
+//                        cell.bannerImageView.sd_setImage(with: URL(string: (SharedSettings.shared.settings?.setting?.bannersLink ?? "") + "/" + photoLink), placeholderImage: UIImage(named: "placeholder"), options: [.fromLoaderOnly])
         
         return cell
             
         } else {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BrandsColectionViewCell", for: indexPath) as! BrandsColectionViewCell
-            cell.configureCell(brand: brands[indexPath.row])
+       //     cell.configureCell(brand: brands[indexPath.row])
             return cell
         }
     }

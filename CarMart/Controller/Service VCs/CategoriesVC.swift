@@ -65,7 +65,7 @@ class CategoriesVC: UIViewController {
 //        self.navigationController?.pushViewController(homeVC, animated: true)
         
         let storyBaord = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyBaord.instantiateViewController(withIdentifier: "HomeTBC")
+        let vc = storyBaord.instantiateViewController(withIdentifier: "HomeTBC") as! HomeTCB
         vc.modalPresentationStyle =  .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
@@ -92,10 +92,10 @@ class CategoriesVC: UIViewController {
         return cell
       }
       
-      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemSize = (collectionView.frame.width - (collectionView.contentInset.left + collectionView.contentInset.right + 10)) / 2
-        return CGSize(width: itemSize, height: itemSize)
-      }
+//      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let itemSize = (collectionView.frame.width - (collectionView.contentInset.left + collectionView.contentInset.right + 10)) / 2
+//        return CGSize(width: itemSize, height: itemSize)
+//      }
         
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
          //   FastMaintenanceVC
@@ -133,11 +133,11 @@ class CategoriesVC: UIViewController {
         
         if cellHeight == "tall" {
             
-            return (collectionView.frame.width / 2) * 1.55
+            return (collectionView.frame.width / 2) * 1.4
             
         } else {
             
-            return (collectionView.frame.width / 2) * 1.09
+            return (collectionView.frame.width / 2)
             
         }
       }

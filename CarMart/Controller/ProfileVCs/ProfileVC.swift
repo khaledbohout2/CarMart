@@ -12,7 +12,6 @@ class ProfileVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
     }
 
     // MARK: - Table view data source
@@ -36,7 +35,7 @@ class ProfileVC: UITableViewController {
             } else if indexPath.row == 2 {
                 
                 let storiBoard = UIStoryboard(name: "Profile", bundle: nil)
-                let categoriesListVC = storiBoard.instantiateViewController(withIdentifier: "Notifications")
+                let categoriesListVC = storiBoard.instantiateViewController(withIdentifier: "NotificationsVC")
                 self.navigationController?.pushViewController(categoriesListVC, animated: true)
                 
             } else if indexPath.row == 3 {
@@ -64,7 +63,7 @@ class ProfileVC: UITableViewController {
             } else if indexPath.row == 1 {
                 
                 let storiBoard = UIStoryboard(name: "Profile", bundle: nil)
-                let settingsVC = storiBoard.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsVC
+                let settingsVC = storiBoard.instantiateViewController(withIdentifier: "SettingVC") 
                 self.navigationController?.pushViewController(settingsVC, animated: true)
                 
             } else if indexPath.row == 2 {

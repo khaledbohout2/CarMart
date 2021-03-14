@@ -19,6 +19,9 @@ class MyCart: UIViewController {
     
     func initTableView() {
         
+        let cartItemNib = UINib(nibName: "CartItemCollectionViewCell", bundle: nil)
+        cartTableView.register(cartItemNib, forCellReuseIdentifier: "CartItemCollectionViewCell")
+        
         cartTableView.delegate = self
         cartTableView.dataSource = self
     }

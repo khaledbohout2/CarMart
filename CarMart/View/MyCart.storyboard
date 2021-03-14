@@ -24,7 +24,7 @@
         <scene sceneID="Jz4-mv-EJp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yIF-dL-SxK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Mask Group 183" id="vQl-ip-rvJ"/>
+                    <tabBarItem key="tabBarItem" title="" image="Path 27618" id="vQl-ip-rvJ"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SNr-Bs-19q">
@@ -1051,9 +1051,9 @@
         <image name="Group 1324" width="51" height="56"/>
         <image name="Group 1325" width="286" height="56"/>
         <image name="Group 1333" width="22" height="22"/>
-        <image name="Mask Group 183" width="24" height="24"/>
         <image name="Mask Group 430" width="260" height="260"/>
         <image name="Mask Group 431" width="241" height="229"/>
+        <image name="Path 27618" width="24" height="13"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

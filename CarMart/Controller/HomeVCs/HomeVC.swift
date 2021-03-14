@@ -20,6 +20,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var featuredBrandsCollectionView: UICollectionView!
     @IBOutlet weak var newArrivalsCollectionView: UICollectionView!
     //   @IBOutlet weak var loaderImageView: GIFImageView!
+    @IBOutlet weak var pannersCollectionView: UICollectionView!
     
     //MARK: - Vars
     
@@ -66,6 +67,7 @@ class HomeVC: UIViewController {
      //   self.pannersCollectionView.scrollToItem(at:IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: false)
         
         self.tabBarController?.tabBar.isHidden = false
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -86,44 +88,46 @@ class HomeVC: UIViewController {
     
     func setUpNavigation() {
         
+    //    navigationController?.navigationBar.prefersLargeTitles = true
+
+        if #available(iOS 13.0, *) {
+            
+            let appearance = UINavigationBarAppearance()
+            
+            appearance.backgroundColor = hexStringToUIColor(hex: "#F4F6F8")
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+         //   appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+            navigationController?.navigationBar.tintColor = .white
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.compactAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
+            
+        } else {
+            // Fallback on earlier versions
+                self.navigationController?.navigationBar.backgroundColor = hexStringToUIColor(hex: "#F4F6F8")
+        }
+
+
         let fontSize: CGFloat
-        
+
         if self.view.frame.width > 500 {
             fontSize = 27
         } else {
             fontSize = 18
         }
-        
-        self.navigationController?.navigationBar.backgroundColor = hexStringToUIColor(hex: "#204BF6")
-         //   self.navigationItem.title = "Filter".localizableString()
-           // self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: hexStringToUIColor(hex: "#282828"),
-                 //                                                           NSAttributedString.Key.font: UIFont(name: "Poppins-Regular".localizableString(), size: fontSize)!]
-            
+//
+
+    //        self.navigationItem.title = "notifications".localizableString()
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: hexStringToUIColor(hex: "#FFFFFF"),
+                                                                            NSAttributedString.Key.font: UIFont(name: "Poppins-Regular".localizableString(), size: fontSize)!]
+
 
         
-        navigationController?.navigationBar.clipsToBounds = true
-        
-        navigationController?.navigationBar.barTintColor = hexStringToUIColor(hex: "#204BF6")
-        
-
-        
-        self.navigationController?.navigationBar.isHidden = false
-        self.navigationItem.setHidesBackButton(true, animated: true)
-        self.navigationController?.navigationBar.backgroundColor = hexStringToUIColor(hex: "#204BF6")
-        
-        let height: CGFloat = 100 //whatever height you want to add to the existing height
-        let bounds = self.navigationController!.navigationBar.bounds
-        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height + height)
-        
-        let searchBtn = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-        searchBtn.image = UIImage(named: "Icon awesome-search".localizableString())
-        searchBtn.tintColor = hexStringToUIColor(hex: "#FFFFFF")
-        navigationItem.leftBarButtonItem = searchBtn
-        
-        let cartBtn = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-        cartBtn.image = UIImage(named: "Path 27618")
-        cartBtn.tintColor = hexStringToUIColor(hex: "#FFFFFF")
-        navigationItem.leftBarButtonItem = cartBtn
+//        let backBtn = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(backTapped))
+//        backBtn.image = UIImage(named: "ArrowLeft".localizableString())
+//        backBtn.tintColor = hexStringToUIColor(hex: "#000000")
+//        navigationItem.leftBarButtonItem = backBtn
         
     }
     
@@ -152,34 +156,30 @@ class HomeVC: UIViewController {
     
     func initCollectionViews() {
         
+        let pannersNib = UINib(nibName: "PannersCollectionViewCell", bundle: nil)
+        pannersCollectionView.register(pannersNib, forCellWithReuseIdentifier: "PannersCollectionViewCell")
+        pannersCollectionView.delegate = self
+        pannersCollectionView.dataSource = self
+        
         let categoryNib = UINib(nibName: "CategoryCollectionViewCell", bundle: nil)
         exploreCollectionView.register(categoryNib, forCellWithReuseIdentifier: "CategoryCollectionViewCell")
         exploreCollectionView.delegate = self
         exploreCollectionView.dataSource = self
       //  pannersCollectionView.scrollToItem(at:IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: false)
         
-        
-        
-        
         let FeatureBrandsNib = UINib(nibName: "FeatureBrandsCollectionViewCell", bundle: nil)
         featuredBrandsCollectionView.register(FeatureBrandsNib, forCellWithReuseIdentifier: "FeatureBrandsCollectionViewCell")
         featuredBrandsCollectionView.delegate = self
         featuredBrandsCollectionView.dataSource = self
-        
-
-        
         
         let bestSellingNib = UINib(nibName: "CollectionViewCell", bundle: nil)
         newArrivalsCollectionView.register(bestSellingNib, forCellWithReuseIdentifier: "CollectionViewCell")
         newArrivalsCollectionView.delegate = self
         newArrivalsCollectionView.dataSource = self
         
-        
         bestSellerCollectionView.register(bestSellingNib, forCellWithReuseIdentifier: "CollectionViewCell")
         bestSellerCollectionView.delegate = self
         bestSellerCollectionView.dataSource = self
-        
-
         
     }
     
@@ -321,7 +321,7 @@ class HomeVC: UIViewController {
     
     @IBAction func viewAllFeaturedBrands(_ sender: Any) {
         
-        let storiBoard = UIStoryboard(name: "Lists", bundle: nil)
+        let storiBoard = UIStoryboard(name: "Home", bundle: nil)
         let brandsListVC = storiBoard.instantiateViewController(withIdentifier: "BrandsVC") as! BrandsVC
         self.navigationController?.pushViewController(brandsListVC, animated: true)
         
@@ -349,7 +349,13 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if collectionView == exploreCollectionView {
+        if collectionView == pannersCollectionView {
+            
+            return 3
+            
+         //   return pannersArr.count
+            
+        } else if collectionView == exploreCollectionView {
             
         //    return pannersArr.count
             return 3
@@ -384,7 +390,15 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if collectionView == exploreCollectionView {
+        if collectionView == pannersCollectionView {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PannersCollectionViewCell", for: indexPath) as! PannersCollectionViewCell
+     //       cell.configureCell(banner: self.pannersArr[indexPath.row])
+            
+            return cell
+            
+        } else if collectionView == exploreCollectionView {
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! CategoryCollectionViewCell
             cell.categoryImageView.image = UIImage(named: "cat" + "\(indexPath.row + 1)")
             
@@ -433,7 +447,12 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        if collectionView == exploreCollectionView {
+        
+        if collectionView == pannersCollectionView {
+            
+            return CGSize(width: collectionView.frame.width - 60, height: collectionView.frame.height)
+            
+        } else if collectionView == exploreCollectionView {
             
             return CGSize(width: (collectionView.frame.width) / 2.5, height: collectionView.frame.height - 10)
             
