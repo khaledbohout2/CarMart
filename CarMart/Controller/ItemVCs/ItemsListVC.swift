@@ -42,15 +42,15 @@ extension ItemsListVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
   
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemListCollectionViewCell", for: indexPath as IndexPath) as! ItemListCollectionViewCell
-    let index = indexPath.row
-    if index < 4 {
-        
-    cell.photo = Photo(caption: "Need Repair", comment: "1200 repair", image: UIImage(named: "ser" + "\(indexPath.row)")!)
-        
-    } else {
-        
-        cell.photo = Photo(caption: "Need Repair", comment: "1200 repair", image: UIImage(named: "ser" + "\(indexPath.row / 2)")!)
-    }
+//    let index = indexPath.row
+//    if index < 4 {
+//        
+//    cell.photo = Photo(caption: "Need Repair", comment: "1200 repair", image: UIImage(named: "ser" + "\(indexPath.row)")!)
+//        
+//    } else {
+//        
+//        cell.photo = Photo(caption: "Need Repair", comment: "1200 repair", image: UIImage(named: "ser" + "\(indexPath.row / 2)")!)
+//    }
     return cell
   }
     

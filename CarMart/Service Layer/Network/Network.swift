@@ -56,10 +56,18 @@ class Network {
     @discardableResult
     static func request<T: Requestable>(req: T, completionHandler: @escaping (NetworkResult<T.ResponseType>) -> Void) -> DataRequest? {
         
-        let url = URL(string: req.baseUrl.absoluteString + req.endpoint)!
+        var url: URL!
         
-        print(url)
-          //  req.baseUrl.appendingPathComponent(req.endpoint)
+        if req.method == .post {
+            
+            url = req.baseUrl.appendingPathComponent(req.endpoint)
+            
+        } else {
+        
+         url = URL(string: req.baseUrl.absoluteString + req.endpoint)!
+            
+        }
+
         let request = prepareRequest(for: url, req: req)
         
         return AF.request(request).responseJSON { (response) in
@@ -148,3 +156,4 @@ extension Network {
         }
     }
 }
+

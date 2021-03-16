@@ -1,36 +1,37 @@
 //
-//  loginUserRequest.swift
+//  GetCarYearsRequest.swift
 //  CarMart
 //
-//  Created by Khaled Bohout on 11/03/2021.
+//  Created by Khaled Bohout on 15/03/2021.
 //
 
 import Foundation
 
-final class loginUserRequest: Requestable {
+final class GetCarYearsRequest: Requestable {
     
-    typealias ResponseType = LoginResponse
+    typealias ResponseType = CarYearssResponse
     
-    private var mail: String?
-    private var pass: String?
+    private var brand: String
+    private var model: String
     
-    init(mail: String, pass: String) {
+    init(brand: String, model: String) {
         
-        self.mail = mail
-        self.pass = pass
+        self.brand = brand
+        self.model = model
     }
     
     var baseUrl: URL {
+        
         return  URL(string: URLS.baseURL)!
     }
     
     var endpoint: String {
         
-        return "api/login"
+        return "api/GetCarYears/\(brand)/\(model)"
     }
     
     var method: Network.Method {
-        return .post
+        return .get
     }
     
     var query: Network.QueryType {
@@ -39,7 +40,7 @@ final class loginUserRequest: Requestable {
     
     var parameters: [String : Any]? {
         
-        return ["email" : mail!, "password": pass!]
+        return nil
     }
     
     var headers: [String : String]? {

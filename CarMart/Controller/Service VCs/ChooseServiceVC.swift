@@ -9,8 +9,7 @@ import UIKit
 import DropDown
 
 class ChooseServiceVC: UIViewController {
-    
-    @IBOutlet weak var servicesCollectionView: UICollectionView!
+
     @IBOutlet weak var phoneNumTxtField: UITextField!
     @IBOutlet weak var nameTxtField: UITextField!
 
@@ -41,17 +40,9 @@ class ChooseServiceVC: UIViewController {
         
         self.navigationController?.navigationBar.isHidden = true
         
-        setUpCollectionView()
     }
     
-    func setUpCollectionView() {
-        
-        let categoriesNib = UINib(nibName: "ServicesCollectionViewCell", bundle: nil)
-        servicesCollectionView.register(categoriesNib, forCellWithReuseIdentifier: "ServicesCollectionViewCell")
-        servicesCollectionView.delegate = self
-        servicesCollectionView.dataSource = self
-        
-    }
+
     
     func setUpCareDropDown() {
         
@@ -130,58 +121,4 @@ class ChooseServiceVC: UIViewController {
     
 }
 
-extension ChooseServiceVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServicesCollectionViewCell", for: indexPath) as! ServicesCollectionViewCell
-        
-        return cell
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: ((collectionView.frame.width) / 5), height: (collectionView.frame.height - 20))
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        //item
-        
-      //  BookOfferVC
-        
-        let storyBaord = UIStoryboard(name: "Item", bundle: nil)
-        let bookOfferVC = storyBaord.instantiateViewController(withIdentifier: "BookOfferVC")
-        
-        self.navigationController?.pushViewController(bookOfferVC, animated: true)
-    }
-    
-    
-}
 
-//MARK:- APIs
-
-extension ChooseServiceVC {
-    
-    func registerUser() {
-        
-        let randomInt = Int.random(in: 1..<5)
-        
-        let name = nameTxtField.text
-        let phone = phoneNumTxtField.text
-        let care = self.care
-        let color = self.color
-        let year = self.year
-        let accountName = randomInt
-        
-        
-    }
-}

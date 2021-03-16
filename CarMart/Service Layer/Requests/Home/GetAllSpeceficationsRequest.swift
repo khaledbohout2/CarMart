@@ -1,23 +1,17 @@
 //
-//  loginUserRequest.swift
+//  GetAllSpeceficationsRequest.swift
 //  CarMart
 //
-//  Created by Khaled Bohout on 11/03/2021.
+//  Created by Khaled Bohout on 16/03/2021.
 //
 
 import Foundation
 
-final class loginUserRequest: Requestable {
+final class GetAllSpeceficationsRequest: Requestable {
     
-    typealias ResponseType = LoginResponse
+    typealias ResponseType = [Specification]
     
-    private var mail: String?
-    private var pass: String?
-    
-    init(mail: String, pass: String) {
-        
-        self.mail = mail
-        self.pass = pass
+    init() {
     }
     
     var baseUrl: URL {
@@ -26,11 +20,11 @@ final class loginUserRequest: Requestable {
     
     var endpoint: String {
         
-        return "api/login"
+        return "api/specifications"
     }
     
     var method: Network.Method {
-        return .post
+        return .get
     }
     
     var query: Network.QueryType {
@@ -39,7 +33,7 @@ final class loginUserRequest: Requestable {
     
     var parameters: [String : Any]? {
         
-        return ["email" : mail!, "password": pass!]
+        return nil
     }
     
     var headers: [String : String]? {
@@ -55,3 +49,4 @@ final class loginUserRequest: Requestable {
         return .reloadIgnoringLocalAndRemoteCacheData
     }
 }
+

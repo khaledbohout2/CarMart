@@ -83,6 +83,18 @@ func getUserType() -> String {
     return def.object(forKey: "userType") as? String ?? "0"
 }
 
+func getUserProfileImage() -> String {
+    
+    let def = UserDefaults.standard
+    return def.object(forKey: "profileImage") as? String ?? ""
+}
+
+func getUserName() -> String {
+    
+    let def = UserDefaults.standard
+    return def.object(forKey: "fullName") as? String ?? ""
+}
+
 func setUserType(userType: String)  {
     
     let def = UserDefaults.standard
@@ -113,26 +125,27 @@ func saveLoginUser(user: LoginResponse) {
     
 }
 
-//func setUserData(user: User) {
-//    
-//    let def = UserDefaults.standard
-//    
-//    
-//    def.setValue(user.id, forKey: "id")
-//    def.setValue(user.phone, forKey: "phone")
-//    def.setValue(user.fullName, forKey: "fullName")
-//    def.setValue(user.accountType, forKey: "accountType")
-//    def.setValue(user.email, forKey: "email")
-//    def.setValue(user.tokens?.accessToken, forKey: "accessToken")
-//    def.setValue(user.address, forKey: "address")
-//    def.setValue(user.createdAt, forKey: "createdAt")
-//    def.setValue(user.loginMethod, forKey: "loginMethod")
-//    def.setValue(user.promoCode, forKey: "promoCode")
-//    def.setValue(user.tokens?.refreshToken, forKey: "refreshToken")
-//    
-//    def.synchronize()
-//    
-//}
+func setUserData(user: RegisterResponse) {
+    
+    let def = UserDefaults.standard
+    
+    
+    def.setValue(user.id, forKey: "id")
+    def.setValue(user.phone, forKey: "phone")
+    def.setValue(user.fullName, forKey: "fullName")
+    def.setValue(user.accountType, forKey: "accountType")
+    def.setValue(user.email, forKey: "email")
+    def.setValue(user.tokens?.accessToken, forKey: "accessToken")
+  //  def.setValue(user.address, forKey: "address")
+    def.setValue(user.createdAt, forKey: "createdAt")
+   // def.setValue(user.loginMethod, forKey: "loginMethod")
+   // def.setValue(user.promoCode, forKey: "promoCode")
+    def.setValue(user.tokens?.refreshToken, forKey: "refreshToken")
+  //  def.setValue(user.ph, forKey: <#T##String#>)
+    
+    def.synchronize()
+    
+}
 
 //func logingUser(user: LoginResponse) {
 //

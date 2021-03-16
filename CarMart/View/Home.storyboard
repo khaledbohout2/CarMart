@@ -439,9 +439,9 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="THw-c0-nJe">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="18L-WQ-Bza">
+                                        <rect key="frame" x="24" y="0.0" width="327" height="734"/>
+                                        <color key="backgroundColor" red="0.95686274509803915" green="0.96470588235294119" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="62" minimumInteritemSpacing="62" id="18L-WQ-Bza">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -450,11 +450,11 @@
                                         <cells/>
                                     </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.96470588235294119" blue="0.97254901960784312" alpha="0.57999999999999996" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="THw-c0-nJe" secondAttribute="bottom" id="62m-nM-3jK"/>
-                                    <constraint firstItem="THw-c0-nJe" firstAttribute="leading" secondItem="wHA-nP-qjY" secondAttribute="leading" id="KsO-8s-mdA"/>
-                                    <constraint firstAttribute="trailing" secondItem="THw-c0-nJe" secondAttribute="trailing" id="ZdX-r5-91c"/>
+                                    <constraint firstItem="THw-c0-nJe" firstAttribute="leading" secondItem="wHA-nP-qjY" secondAttribute="leading" constant="24" id="KsO-8s-mdA"/>
+                                    <constraint firstAttribute="trailing" secondItem="THw-c0-nJe" secondAttribute="trailing" constant="24" id="ZdX-r5-91c"/>
                                     <constraint firstItem="THw-c0-nJe" firstAttribute="top" secondItem="wHA-nP-qjY" secondAttribute="top" id="gu7-iL-FRo"/>
                                 </constraints>
                             </view>

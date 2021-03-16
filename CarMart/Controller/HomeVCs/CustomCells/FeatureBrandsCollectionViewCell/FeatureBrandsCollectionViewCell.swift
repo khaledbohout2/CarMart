@@ -19,7 +19,7 @@ class FeatureBrandsCollectionViewCell: UICollectionViewCell {
     
     func configureCell(brand: Brand, color: String) {
         
-        self.brandImageView.sd_setImage(with: URL(string: (SharedSettings.shared.settings?.setting?.usersPhotoLink ?? "") + "/" + (brand.photoLink ?? "")), placeholderImage: UIImage(named: "placeholder"), options: [.fromLoaderOnly])
+//        self.brandImageView.sd_setImage(with: URL(string: (SharedSettings.shared.settings?.setting?.usersPhotoLink ?? "") + "/" + (brand.photoLink ?? "")), placeholderImage: UIImage(named: "placeholder"), options: [.fromLoaderOnly])
         
         let opacity:CGFloat = 0.15
         brandImageView.backgroundColor = hexStringToUIColor(hex: color).withAlphaComponent(opacity)

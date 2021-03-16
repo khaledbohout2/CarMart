@@ -20,7 +20,7 @@ class categoriesCollectionViewCell: UICollectionViewCell {
     
     func configureCell(category: CategoryElement) {
         
-        self.categoryTitleLbl.text = category.categoryName
+        self.categoryTitleLbl.text = category.title
         self.categoryTitleLbl.setLocalization()
         
         let coloredIconsLink = SharedSettings.shared.settings?.setting?.coloredIconsLink ?? ""

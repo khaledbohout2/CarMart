@@ -53,16 +53,16 @@ extension WinchListVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemListCollectionViewCell", for: indexPath as IndexPath) as! ItemListCollectionViewCell
     
-    let index = indexPath.row
-    print(index)
-    if index < 4 {
-        
-    cell.photo = Photo(caption: "Hyundai service senter Repair", comment: "6 october", image: UIImage(named: "win" + "\(index)")!)
-        
-    } else {
-        
-        cell.photo = Photo(caption: "Need Repair", comment: "1200 repair", image: UIImage(named: "win" + "\(indexPath.row / 2)")!)
-    }
+//    let index = indexPath.row
+//    print(index)
+//    if index < 4 {
+//        
+//    cell.photo = Photo(caption: "Hyundai service senter Repair", comment: "6 october", image: UIImage(named: "win" + "\(index)")!)
+//        
+//    } else {
+//        
+//        cell.photo = Photo(caption: "Need Repair", comment: "1200 repair", image: UIImage(named: "win" + "\(indexPath.row / 2)")!)
+//    }
     return cell
   }
   

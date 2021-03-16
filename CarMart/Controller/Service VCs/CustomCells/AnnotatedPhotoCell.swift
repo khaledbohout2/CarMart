@@ -29,6 +29,7 @@
 */
 
 import UIKit
+import SDWebImage
 
 class AnnotatedPhotoCell: UICollectionViewCell {
     
@@ -39,18 +40,17 @@ class AnnotatedPhotoCell: UICollectionViewCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    containerView.layer.cornerRadius = 6
+    
+    containerView.layer.cornerRadius = 24
     containerView.layer.masksToBounds = true
   }
-  
-  var photo: Photo? {
     
-    didSet {
-      if let photo = photo {
-        imageView.image = photo.image
-        captionLabel.text = photo.caption
-        commentLabel.text = photo.comment
-      }
+    func configureCell(category: CategoryElement) {
+        
+        let imageLink = category.photoLink
+        
+        imageView.sd_setImage(with: URL(string: URLS.categoriesURL + imageLink), placeholderImage: UIImage(named: "placeholder"), options: [.fromLoaderOnly])
+        captionLabel.text = category.title
+        commentLabel.text = category.datumDescription
     }
-  }
 }

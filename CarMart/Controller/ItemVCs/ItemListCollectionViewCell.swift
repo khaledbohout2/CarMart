@@ -20,14 +20,14 @@ class ItemListCollectionViewCell: UICollectionViewCell {
       containerView.layer.masksToBounds = true
     }
     
-    var photo: Photo? {
-      
-      didSet {
-        if let photo = photo {
-          imageView.image = photo.image
-          captionLabel.text = photo.caption
-          commentLabel.text = photo.comment
-        }
-      }
-    }
+//    var photo: Photo? {
+//      
+//      didSet {
+//        if let photo = photo {
+//          imageView.image = photo.image
+//          captionLabel.text = photo.caption
+//          commentLabel.text = photo.comment
+//        }
+//      }
+//    }
   }

@@ -8,6 +8,7 @@
 import UIKit
 import Gifu
 import AutoScrollCollectionView
+import JGProgressHUD
 
 /// HomeVC
 
@@ -22,12 +23,16 @@ class HomeVC: UIViewController {
     //   @IBOutlet weak var loaderImageView: GIFImageView!
     @IBOutlet weak var pannersCollectionView: UICollectionView!
     
+    var hud = JGProgressHUD()
+    
     //MARK: - Vars
     
     var mySubview = UIView()
     var loaderGIF = GIFImageView()
+    
+    var specificationsArr = [Specification]()
 
-    var categories = [CategoryElement]()
+ //   var categories = [CategoryElement]()
     var freeOffers = [OfferModel]()
     var paidOffers = [OfferModel]()
     var hotOffers = [OfferModel]()
@@ -36,6 +41,8 @@ class HomeVC: UIViewController {
     var categoryIndex = "1"
     
     var brandColors = ["#2BB49D", "#4089E8", "#E95FA4", "#F6C677"]
+    
+    let homePresenter = HomePresenter()
     
     //MARK: - view life cycle
     
@@ -46,13 +53,16 @@ class HomeVC: UIViewController {
                 
         initCollectionViews()
         setUpNavigation()
+        homePresenter.delegate = self
         
         if Reachable.isConnectedToNetwork() {
             
-     //       addLoadingView(mySubview: mySubview, loaderGif: loaderGIF, view: view)
+            hud.textLabel.text = "loading"
+            hud.show(in: self.view)
             
-      //  getHomeData()
-      //  getCategories()
+            let req = GetAllSpeceficationsRequest()
+            
+            homePresenter.getAllSpecifications(req: req)
             
         } else {
             
@@ -357,8 +367,8 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             
         } else if collectionView == exploreCollectionView {
             
-        //    return pannersArr.count
-            return 3
+            return specificationsArr.count
+            
             
         } else if collectionView == bestSellerCollectionView {
             
@@ -400,9 +410,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         } else if collectionView == exploreCollectionView {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! CategoryCollectionViewCell
-            cell.categoryImageView.image = UIImage(named: "cat" + "\(indexPath.row + 1)")
-            
-         //   cell.configureCell(banner: self.pannersArr[indexPath.row])
+            cell.configureCell(spec: specificationsArr[indexPath.row])
             
             return cell
             
@@ -454,7 +462,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             
         } else if collectionView == exploreCollectionView {
             
-            return CGSize(width: (collectionView.frame.width) / 2.5, height: collectionView.frame.height - 10)
+            return CGSize(width: (collectionView.frame.width) / 2.5, height: ((collectionView.frame.width / 2.5) + 33))
             
         } else if collectionView == featuredBrandsCollectionView {
             
@@ -508,79 +516,24 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     }
 }
 
-//MARK: - APIs
 
-//extension HomeVC {
-//
-//    /**
-//       func that make API call that get Home Data
-//      - Parameters :
-//      - zero parameters
-//      */
-//
-//    func getHomeData() {
-//
-//
-//        _ = Network.request(req: HomeOffersRequest(), completionHandler: { (result) in
-//            switch result {
-//
-//            case .success(let homeOffers):
-//
-//                self.brands = homeOffers.featured!
-//                self.freeOffers = homeOffers.freeOffers!
-//                self.paidOffers = homeOffers.paidOffers!
-//                self.hotOffers = homeOffers.populerOffers!
-//                self.pannersArr = homeOffers.photos!
-//                self.reloadCollectionViews()
-//                self.mySubview.isHidden = true
-////                self.loaderGif.isHidden = true
-////                self.loaderBackGround.isHidden = true
-//
-//
-//            case .cancel(let cancelError):
-//                print(cancelError!)
-//
-////                self.loaderGif.isHidden = true
-////                self.loaderBackGround.isHidden = true
-//                self.mySubview.isHidden = true
-//                Toast.show(message: "someErrorHappened".localizableString(), controller: self)
-//
-//            case .failure(let error):
-//
-////                self.loaderGif.isHidden = true
-////                self.loaderBackGround.isHidden = true
-//                self.mySubview.isHidden = true
-//                Toast.show(message: "someErrorHappened".localizableString(), controller: self)
-//                print(error!)
-//            }
-//        })
-//    }
-//
-//    /**
-//       func that make API call that get categories
-//      - Parameters :
-//      - zero parameters
-//      */
-//
-//    func getCategories() {
-//
-//        _ = Network.request(req: CategoriesRequest(index: "1"), completionHandler: { (result) in
-//           switch result {
-//           case .success(let response):
-//           print(response)
-//            self.categories = response.categories!
-//            self.categoriesCollectionView.reloadData()
-//            self.mySubview.isHidden = true
-//            case .cancel(let cancelError):
-//            self.mySubview.isHidden = true
-//            Toast.show(message: "someErrorHappened".localizableString(), controller: self)
-//           print(cancelError!)
-//           case .failure(let error):
-//            self.mySubview.isHidden = true
-//            Toast.show(message: "someErrorHappened".localizableString(), controller: self)
-//           print(error!)
-//            }
-//        })
-//    }
-//}
+extension HomeVC: HomeDelegate {
+    
+    func getAllSpecificationsSuccess(success: Bool) {
+        
+        if success {
+            hud.dismiss()
+        } else {
+            hud.dismiss()
+            Toast.show(message: "some error happened, please try again later", controller: self)
+        }
+    }
+    
+    func passAllSpecifications(specs: [Specification]) {
+        
+        self.specificationsArr = specs
+        self.exploreCollectionView.reloadData()
+    }
+    
+}
 

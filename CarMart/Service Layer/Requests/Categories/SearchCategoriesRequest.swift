@@ -1,23 +1,20 @@
 //
-//  loginUserRequest.swift
+//  SearchCategoriesRequest.swift
 //  CarMart
 //
-//  Created by Khaled Bohout on 11/03/2021.
+//  Created by Khaled Bohout on 16/03/2021.
 //
 
 import Foundation
 
-final class loginUserRequest: Requestable {
+final class SearchCategoriesRequest: Requestable {
     
-    typealias ResponseType = LoginResponse
+    typealias ResponseType = CategoriesResponse
+    private var value: String?
     
-    private var mail: String?
-    private var pass: String?
-    
-    init(mail: String, pass: String) {
+    init(value: String) {
         
-        self.mail = mail
-        self.pass = pass
+        self.value = value
     }
     
     var baseUrl: URL {
@@ -26,7 +23,7 @@ final class loginUserRequest: Requestable {
     
     var endpoint: String {
         
-        return "api/login"
+        return "api/categories_search"
     }
     
     var method: Network.Method {
@@ -39,7 +36,7 @@ final class loginUserRequest: Requestable {
     
     var parameters: [String : Any]? {
         
-        return ["email" : mail!, "password": pass!]
+        return ["value" : self.value!]
     }
     
     var headers: [String : String]? {
