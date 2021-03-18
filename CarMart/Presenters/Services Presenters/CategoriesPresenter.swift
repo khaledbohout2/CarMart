@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CategoriesDelegate {
+protocol CategoriesDelegate: class {
     
     func getCategoriesSuccess(success: Bool)
     func passCategories(categories: CategoriesResponse)
@@ -18,7 +18,7 @@ protocol CategoriesDelegate {
 
 class CategoriesPresenter {
     
-    var delegate: CategoriesDelegate?
+    weak var delegate: CategoriesDelegate?
     
     func getCategories(req: GetCategoriesRequest) {
         Network.request(req: req) { (result) in

@@ -94,9 +94,16 @@ class LoginVC: UIViewController {
                 
                 Toast.show(message: "No internet", controller: self)
             }
-            
         }
     }
+    
+    @IBAction func resetPasswordBtnTapped(_ sender: Any) {
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let entrerMobileVC = storyBoard.instantiateViewController(withIdentifier: "EntrerMobileVC")
+        self.navigationController?.pushViewController(entrerMobileVC, animated: true)
+    }
+    
 }
 
 extension LoginVC: UITextFieldDelegate {

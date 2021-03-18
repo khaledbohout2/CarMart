@@ -13,13 +13,13 @@ protocol ContinueRegisterDelegate: class {
     func registerUser(user: RegisterResponse)
     
     func getCarBrandsSuccess(success: Bool)
-    func passCarBrands(brands: [Brand])
+    func passCarBrands(brands: [String])
     
     func getCarModelsSuccess(success: Bool)
-    func passCarModels(models: [Model])
+    func passCarModels(models: [String])
     
     func getCarYearsSuccess(success: Bool)
-    func passCarYears(years: [Year])
+    func passCarYears(years: [String])
     
     func getCarIdsuccess(success: Bool)
     func passCarId(carId: Int)
@@ -56,7 +56,7 @@ class ContinueRegisterPresenter {
             case .success(let response):
                 print(response)
                 self.delegate?.getCarBrandsSuccess(success: true)
-                self.delegate?.passCarBrands(brands: response.brands)
+                self.delegate?.passCarBrands(brands: response.items)
             case .cancel(let cancelError):
                 print(cancelError!)
                 self.delegate?.getCarBrandsSuccess(success: false)
@@ -74,7 +74,7 @@ class ContinueRegisterPresenter {
             case .success(let response):
                 print(response)
                 self.delegate?.getCarModelsSuccess(success: true)
-                self.delegate?.passCarModels(models: response.models)
+                self.delegate?.passCarModels(models: response.items)
             case .cancel(let cancelError):
                 print(cancelError!)
                 self.delegate?.getCarModelsSuccess(success: false)
@@ -92,7 +92,7 @@ class ContinueRegisterPresenter {
             case .success(let response):
                 print(response)
                 self.delegate?.getCarYearsSuccess(success: true)
-                self.delegate?.passCarYears(years: response.years)
+                self.delegate?.passCarYears(years: response.items)
             case .cancel(let cancelError):
                 print(cancelError!)
                 self.delegate?.getCarYearsSuccess(success: false)

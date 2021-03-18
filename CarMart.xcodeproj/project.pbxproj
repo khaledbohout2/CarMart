@@ -10,9 +10,7 @@
 		0600C5E125FF77800071B05C /* GetCarsBrandsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0600C5E025FF77800071B05C /* GetCarsBrandsRequest.swift */; };
 		0600C5E525FF78880071B05C /* GetCarBrandModelsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0600C5E425FF78880071B05C /* GetCarBrandModelsRequest.swift */; };
 		0600C5E825FF78A00071B05C /* GetCarYearsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0600C5E725FF78A00071B05C /* GetCarYearsRequest.swift */; };
-		0600C5EC25FF79930071B05C /* BrandsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0600C5EB25FF79930071B05C /* BrandsResponse.swift */; };
-		0600C5F125FF7EB20071B05C /* ModelsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0600C5F025FF7EB20071B05C /* ModelsResponse.swift */; };
-		0600C5F525FF7F810071B05C /* CarYearsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0600C5F425FF7F810071B05C /* CarYearsResponse.swift */; };
+		0600C5EC25FF79930071B05C /* CarDataResponseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0600C5EB25FF79930071B05C /* CarDataResponseResponse.swift */; };
 		0600C5F825FF8F240071B05C /* GetCarIdRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0600C5F725FF8F240071B05C /* GetCarIdRequest.swift */; };
 		0600C5FC25FF91C60071B05C /* GetCarIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0600C5FB25FF91C60071B05C /* GetCarIdResponse.swift */; };
 		0600C63625FFAA830071B05C /* GetCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0600C63525FFAA830071B05C /* GetCategoriesRequest.swift */; };
@@ -106,6 +104,8 @@
 		066A203D25D40AEE00B99706 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 066A203C25D40AEE00B99706 /* Map.storyboard */; };
 		06724DB725F7CB3900AB3F01 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06724DB625F7CB3900AB3F01 /* FilterVC.swift */; };
 		067B22FA25FA4C7300BD2F60 /* loginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B22F925FA4C7300BD2F60 /* loginUserRequest.swift */; };
+		067FC5AC2603A72D000AF744 /* GetAllWinchesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067FC5AB2603A72D000AF744 /* GetAllWinchesRequest.swift */; };
+		067FC5B22603A81F000AF744 /* AllWinchesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067FC5B12603A81F000AF744 /* AllWinchesResponse.swift */; };
 		068617E825EBEFFD00CC4471 /* HomeTCB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068617E725EBEFFD00CC4471 /* HomeTCB.swift */; };
 		068F692C25D13ABA006BA686 /* FAQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068F691D25D13ABA006BA686 /* FAQTableViewCell.xib */; };
 		068F692D25D13ABA006BA686 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F691E25D13ABA006BA686 /* FAQTableViewCell.swift */; };
@@ -123,6 +123,13 @@
 		06BE000925C6DD0800076551 /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BE000725C6DD0800076551 /* ServicesCollectionViewCell.swift */; };
 		06BE000A25C6DD0800076551 /* ServicesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06BE000825C6DD0800076551 /* ServicesCollectionViewCell.xib */; };
 		06BF8AB625CC350600324A49 /* WinchDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF8AB525CC350600324A49 /* WinchDetailsVC.swift */; };
+		06C1EF9D26034ACF00D34EEE /* EditProfilePresenters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1EF9C26034ACF00D34EEE /* EditProfilePresenters.swift */; };
+		06C1EFB726035BB100D34EEE /* EntrerMobileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1EFB626035BB100D34EEE /* EntrerMobileVC.swift */; };
+		06C1EFBA26035CAA00D34EEE /* EnterMobilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1EFB926035CAA00D34EEE /* EnterMobilePresenter.swift */; };
+		06C1EFBD260362B900D34EEE /* EnterVerificationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1EFBC260362B900D34EEE /* EnterVerificationCodeVC.swift */; };
+		06C1EFC02603639500D34EEE /* EnterNewPassPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1EFBF2603639500D34EEE /* EnterNewPassPresenter.swift */; };
+		06C1EFC42603641900D34EEE /* EnterNewPassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1EFC32603641900D34EEE /* EnterNewPassVC.swift */; };
+		06C1EFC72603661600D34EEE /* ResetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C1EFC62603661600D34EEE /* ResetPasswordRequest.swift */; };
 		06C2064B25D047B7004D6A11 /* BookCarWashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C2064A25D047B7004D6A11 /* BookCarWashVC.swift */; };
 		06C2066725D04F1C004D6A11 /* ChatToTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C2066225D04F1C004D6A11 /* ChatToTableViewCell.swift */; };
 		06C2066825D04F1C004D6A11 /* ChatToTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06C2066325D04F1C004D6A11 /* ChatToTableViewCell.xib */; };
@@ -167,10 +174,20 @@
 		06E5A7A525D18DE5000CB20F /* MyGarageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E5A7A325D18DE5000CB20F /* MyGarageCollectionViewCell.xib */; };
 		06E5A7AA25D18EBE000CB20F /* CarDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E5A7A825D18EBE000CB20F /* CarDataCell.swift */; };
 		06E5A7AB25D18EBE000CB20F /* CarDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E5A7A925D18EBE000CB20F /* CarDataCell.xib */; };
+		06E6DE9726024DED009299E7 /* CreateResetPasswordCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E6DE9626024DED009299E7 /* CreateResetPasswordCodeRequest.swift */; };
+		06E6DEB326025280009299E7 /* EditProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E6DEB226025280009299E7 /* EditProfileRequest.swift */; };
 		06EF7E3325D155E900295993 /* CartItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EF7E3125D155E900295993 /* CartItemCollectionViewCell.swift */; };
 		06EF7E3425D155E900295993 /* CartItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06EF7E3225D155E900295993 /* CartItemCollectionViewCell.xib */; };
 		06F2853025CAD81B0076CD9A /* ItemsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F2852F25CAD81B0076CD9A /* ItemsListVC.swift */; };
 		06F2854325CAD9FE0076CD9A /* ItemListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F2854225CAD9FE0076CD9A /* ItemListCollectionViewCell.swift */; };
+		06F74F9C2601FAD400461401 /* GetUserGarageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F74F9B2601FAD400461401 /* GetUserGarageRequest.swift */; };
+		06F74F9F2601FD2800461401 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F74F9E2601FD2800461401 /* CarModel.swift */; };
+		06F74FA32601FE1E00461401 /* GaragePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F74FA22601FE1E00461401 /* GaragePresenter.swift */; };
+		06F74FA72602109C00461401 /* AddNewCarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F74FA62602109C00461401 /* AddNewCarPresenter.swift */; };
+		06F74FAA26021A7600461401 /* AddUserCarRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F74FA926021A7600461401 /* AddUserCarRequest.swift */; };
+		06F74FAD2602249700461401 /* NotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F74FAC2602249700461401 /* NotificationsPresenter.swift */; };
+		06F74FB0260229D700461401 /* GetUserNotificationsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F74FAF260229D700461401 /* GetUserNotificationsRequest.swift */; };
+		06F74FB426022B5500461401 /* NotificationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F74FB326022B5500461401 /* NotificationsResponse.swift */; };
 		06FE9B3E25FA462B00580C3F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FE9B0725FA462B00580C3F /* Network.swift */; };
 		06FE9B3F25FA462B00580C3F /* URLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FE9B0825FA462B00580C3F /* URLS.swift */; };
 		06FE9B6E25FA478C00580C3F /* CheckUserExistenceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FE9B6D25FA478C00580C3F /* CheckUserExistenceRequest.swift */; };
@@ -319,6 +336,13 @@
 			remoteGlobalIDString = A8E950A16D00F649C54FFB30F81D7842;
 			remoteInfo = IQKeyboardManagerSwift;
 		};
+		06E6DEAF26024DEE009299E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 065059B625C6FF3000FC4B54 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A4EEE7894643E29BDBB4D6E7B3E67237;
+			remoteInfo = MOLH;
+		};
 		06FF4EBC25CAB01C005F4539 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 065059B625C6FF3000FC4B54 /* Pods.xcodeproj */;
@@ -332,9 +356,7 @@
 		0600C5E025FF77800071B05C /* GetCarsBrandsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarsBrandsRequest.swift; sourceTree = "<group>"; };
 		0600C5E425FF78880071B05C /* GetCarBrandModelsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarBrandModelsRequest.swift; sourceTree = "<group>"; };
 		0600C5E725FF78A00071B05C /* GetCarYearsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarYearsRequest.swift; sourceTree = "<group>"; };
-		0600C5EB25FF79930071B05C /* BrandsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsResponse.swift; sourceTree = "<group>"; };
-		0600C5F025FF7EB20071B05C /* ModelsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsResponse.swift; sourceTree = "<group>"; };
-		0600C5F425FF7F810071B05C /* CarYearsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarYearsResponse.swift; sourceTree = "<group>"; };
+		0600C5EB25FF79930071B05C /* CarDataResponseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDataResponseResponse.swift; sourceTree = "<group>"; };
 		0600C5F725FF8F240071B05C /* GetCarIdRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarIdRequest.swift; sourceTree = "<group>"; };
 		0600C5FB25FF91C60071B05C /* GetCarIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarIdResponse.swift; sourceTree = "<group>"; };
 		0600C63525FFAA830071B05C /* GetCategoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoriesRequest.swift; sourceTree = "<group>"; };
@@ -429,6 +451,8 @@
 		066A203C25D40AEE00B99706 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		06724DB625F7CB3900AB3F01 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		067B22F925FA4C7300BD2F60 /* loginUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginUserRequest.swift; sourceTree = "<group>"; };
+		067FC5AB2603A72D000AF744 /* GetAllWinchesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllWinchesRequest.swift; sourceTree = "<group>"; };
+		067FC5B12603A81F000AF744 /* AllWinchesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWinchesResponse.swift; sourceTree = "<group>"; };
 		068617E725EBEFFD00CC4471 /* HomeTCB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTCB.swift; sourceTree = "<group>"; };
 		068F691D25D13ABA006BA686 /* FAQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FAQTableViewCell.xib; sourceTree = "<group>"; };
 		068F691E25D13ABA006BA686 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
@@ -446,6 +470,13 @@
 		06BE000725C6DD0800076551 /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		06BE000825C6DD0800076551 /* ServicesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCollectionViewCell.xib; sourceTree = "<group>"; };
 		06BF8AB525CC350600324A49 /* WinchDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinchDetailsVC.swift; sourceTree = "<group>"; };
+		06C1EF9C26034ACF00D34EEE /* EditProfilePresenters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenters.swift; sourceTree = "<group>"; };
+		06C1EFB626035BB100D34EEE /* EntrerMobileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrerMobileVC.swift; sourceTree = "<group>"; };
+		06C1EFB926035CAA00D34EEE /* EnterMobilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMobilePresenter.swift; sourceTree = "<group>"; };
+		06C1EFBC260362B900D34EEE /* EnterVerificationCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterVerificationCodeVC.swift; sourceTree = "<group>"; };
+		06C1EFBF2603639500D34EEE /* EnterNewPassPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNewPassPresenter.swift; sourceTree = "<group>"; };
+		06C1EFC32603641900D34EEE /* EnterNewPassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNewPassVC.swift; sourceTree = "<group>"; };
+		06C1EFC62603661600D34EEE /* ResetPasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordRequest.swift; sourceTree = "<group>"; };
 		06C2064A25D047B7004D6A11 /* BookCarWashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCarWashVC.swift; sourceTree = "<group>"; };
 		06C2066225D04F1C004D6A11 /* ChatToTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatToTableViewCell.swift; sourceTree = "<group>"; };
 		06C2066325D04F1C004D6A11 /* ChatToTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatToTableViewCell.xib; sourceTree = "<group>"; };
@@ -494,10 +525,20 @@
 		06E5A7A325D18DE5000CB20F /* MyGarageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGarageCollectionViewCell.xib; sourceTree = "<group>"; };
 		06E5A7A825D18EBE000CB20F /* CarDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDataCell.swift; sourceTree = "<group>"; };
 		06E5A7A925D18EBE000CB20F /* CarDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDataCell.xib; sourceTree = "<group>"; };
+		06E6DE9626024DED009299E7 /* CreateResetPasswordCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateResetPasswordCodeRequest.swift; sourceTree = "<group>"; };
+		06E6DEB226025280009299E7 /* EditProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileRequest.swift; sourceTree = "<group>"; };
 		06EF7E3125D155E900295993 /* CartItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		06EF7E3225D155E900295993 /* CartItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		06F2852F25CAD81B0076CD9A /* ItemsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListVC.swift; sourceTree = "<group>"; };
 		06F2854225CAD9FE0076CD9A /* ItemListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListCollectionViewCell.swift; sourceTree = "<group>"; };
+		06F74F9B2601FAD400461401 /* GetUserGarageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserGarageRequest.swift; sourceTree = "<group>"; };
+		06F74F9E2601FD2800461401 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		06F74FA22601FE1E00461401 /* GaragePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaragePresenter.swift; sourceTree = "<group>"; };
+		06F74FA62602109C00461401 /* AddNewCarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCarPresenter.swift; sourceTree = "<group>"; };
+		06F74FA926021A7600461401 /* AddUserCarRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserCarRequest.swift; sourceTree = "<group>"; };
+		06F74FAC2602249700461401 /* NotificationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsPresenter.swift; sourceTree = "<group>"; };
+		06F74FAF260229D700461401 /* GetUserNotificationsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserNotificationsRequest.swift; sourceTree = "<group>"; };
+		06F74FB326022B5500461401 /* NotificationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsResponse.swift; sourceTree = "<group>"; };
 		06FE9B0725FA462B00580C3F /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		06FE9B0825FA462B00580C3F /* URLS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLS.swift; sourceTree = "<group>"; };
 		06FE9B6D25FA478C00580C3F /* CheckUserExistenceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUserExistenceRequest.swift; sourceTree = "<group>"; };
@@ -533,9 +574,7 @@
 		0600C5EA25FF79690071B05C /* Car */ = {
 			isa = PBXGroup;
 			children = (
-				0600C5EB25FF79930071B05C /* BrandsResponse.swift */,
-				0600C5F025FF7EB20071B05C /* ModelsResponse.swift */,
-				0600C5F425FF7F810071B05C /* CarYearsResponse.swift */,
+				0600C5EB25FF79930071B05C /* CarDataResponseResponse.swift */,
 				0600C5FB25FF91C60071B05C /* GetCarIdResponse.swift */,
 			);
 			path = Car;
@@ -697,6 +736,7 @@
 				065059C725C6FF3000FC4B54 /* IBAnimatable.framework */,
 				06D7102D25CC0E8C009F5FE0 /* IQKeyboardManagerSwift.framework */,
 				06640CD625FE34FF001E5322 /* JGProgressHUD.framework */,
+				06E6DEB026024DEE009299E7 /* MOLH.framework */,
 				065059C925C6FF3000FC4B54 /* Pods_CarMart.framework */,
 				065059CB25C6FF3000FC4B54 /* SDWebImage.framework */,
 				065059CD25C6FF3000FC4B54 /* SkyFloatingLabelTextField.framework */,
@@ -792,6 +832,7 @@
 		06640C9725FE2CEB001E5322 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				06F74FA12601FD9B00461401 /* Profile Presenters */,
 				064FCC6D2600E8D500789CB8 /* Home Presenters */,
 				0600C63825FFAD190071B05C /* Services Presenters */,
 				06640CA925FE2D1A001E5322 /* Welcome Presenters */,
@@ -804,6 +845,8 @@
 			children = (
 				06640CAA25FE2D37001E5322 /* LoginPresenter.swift */,
 				0645E6FB25FE69E800D661CC /* ContinueRegisterPresenter.swift */,
+				06C1EFB926035CAA00D34EEE /* EnterMobilePresenter.swift */,
+				06C1EFBF2603639500D34EEE /* EnterNewPassPresenter.swift */,
 			);
 			path = "Welcome Presenters";
 			sourceTree = "<group>";
@@ -815,6 +858,38 @@
 				0667CD2E2600ACDB00D92C83 /* RegisterResponse.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		067FC5A92603A6F9000AF744 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				067FC5AA2603A702000AF744 /* Winch */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		067FC5AA2603A702000AF744 /* Winch */ = {
+			isa = PBXGroup;
+			children = (
+				067FC5AB2603A72D000AF744 /* GetAllWinchesRequest.swift */,
+			);
+			path = Winch;
+			sourceTree = "<group>";
+		};
+		067FC5AF2603A7F2000AF744 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				067FC5B02603A807000AF744 /* Winches */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		067FC5B02603A807000AF744 /* Winches */ = {
+			isa = PBXGroup;
+			children = (
+				067FC5B12603A81F000AF744 /* AllWinchesResponse.swift */,
+			);
+			path = Winches;
 			sourceTree = "<group>";
 		};
 		068F691C25D13ABA006BA686 /* FAQTableViewCell */ = {
@@ -1068,6 +1143,9 @@
 				0645E6E325FE591300D661CC /* WelcomeVC.swift */,
 				0645E6F825FE679000D661CC /* RegisterVC.swift */,
 				062916CB25FF65680068922E /* ContinueRegisterVC.swift */,
+				06C1EFB626035BB100D34EEE /* EntrerMobileVC.swift */,
+				06C1EFBC260362B900D34EEE /* EnterVerificationCodeVC.swift */,
+				06C1EFC32603641900D34EEE /* EnterNewPassVC.swift */,
 			);
 			path = WelcomeVCs;
 			sourceTree = "<group>";
@@ -1164,6 +1242,37 @@
 			path = CartItemTableViewCell;
 			sourceTree = "<group>";
 		};
+		06F74F842601FAB700461401 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				06F74F9B2601FAD400461401 /* GetUserGarageRequest.swift */,
+				06F74FA926021A7600461401 /* AddUserCarRequest.swift */,
+				06F74FAF260229D700461401 /* GetUserNotificationsRequest.swift */,
+				06E6DEB226025280009299E7 /* EditProfileRequest.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		06F74FA12601FD9B00461401 /* Profile Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				06F74FA22601FE1E00461401 /* GaragePresenter.swift */,
+				06F74FA62602109C00461401 /* AddNewCarPresenter.swift */,
+				06F74FAC2602249700461401 /* NotificationsPresenter.swift */,
+				06C1EF9C26034ACF00D34EEE /* EditProfilePresenters.swift */,
+			);
+			path = "Profile Presenters";
+			sourceTree = "<group>";
+		};
+		06F74FB226022ABB00461401 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				06F74FB326022B5500461401 /* NotificationsResponse.swift */,
+				06F74F9E2601FD2800461401 /* CarModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		06FE9B0525FA462B00580C3F /* Service Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1186,6 +1295,8 @@
 		06FE9B0925FA462B00580C3F /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				067FC5AF2603A7F2000AF744 /* Vendors */,
+				06F74FB226022ABB00461401 /* Profile */,
 				064FCC8B2600EE3A00789CB8 /* ExploreAll */,
 				0600C63C25FFAEE10071B05C /* Category */,
 				0600C5EA25FF79690071B05C /* Car */,
@@ -1197,6 +1308,8 @@
 		06FE9B0B25FA462B00580C3F /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				067FC5A92603A6F9000AF744 /* Vendors */,
+				06F74F842601FAB700461401 /* Profile */,
 				064FCC872600E92A00789CB8 /* Home */,
 				0600C61825FFAA6B0071B05C /* Categories */,
 				0600C5CD25FF76CE0071B05C /* Car */,
@@ -1211,6 +1324,8 @@
 				06FE9B6D25FA478C00580C3F /* CheckUserExistenceRequest.swift */,
 				067B22F925FA4C7300BD2F60 /* loginUserRequest.swift */,
 				0645E6FE25FE6A5A00D661CC /* RegisterUserRequest.swift */,
+				06E6DE9626024DED009299E7 /* CreateResetPasswordCodeRequest.swift */,
+				06C1EFC62603661600D34EEE /* ResetPasswordRequest.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -1436,6 +1551,13 @@
 			remoteRef = 06D7102C25CC0E8C009F5FE0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		06E6DEB026024DEE009299E7 /* MOLH.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MOLH.framework;
+			remoteRef = 06E6DEAF26024DEE009299E7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		06FF4EBD25CAB01C005F4539 /* CircleBar.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -1562,8 +1684,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C1EF9D26034ACF00D34EEE /* EditProfilePresenters.swift in Sources */,
+				06C1EFC02603639500D34EEE /* EnterNewPassPresenter.swift in Sources */,
 				0650C1D025D43393008BF0B6 /* PaymentSuccesfullVC.swift in Sources */,
 				06D7F48E25BED34C00CF0375 /* LoginVC.swift in Sources */,
+				06F74FAD2602249700461401 /* NotificationsPresenter.swift in Sources */,
 				06C66A2D25CABE6800BD9A96 /* MyServicesVC.swift in Sources */,
 				0698B1B625C163A5005E0191 /* AnnotatedPhotoCell.swift in Sources */,
 				065ACF3C25D29F760007AAA5 /* AddNewCar.swift in Sources */,
@@ -1574,6 +1699,7 @@
 				065AF28C25C01C15002E7B18 /* PostMessageModel.swift in Sources */,
 				06C2066925D04F1C004D6A11 /* ChatFromTableViewCell.swift in Sources */,
 				06D7103025CC0FC8009F5FE0 /* BookServicesVC.swift in Sources */,
+				06C1EFC42603641900D34EEE /* EnterNewPassVC.swift in Sources */,
 				06BF8AB625CC350600324A49 /* WinchDetailsVC.swift in Sources */,
 				0660A58E25D3E3F9003A5D38 /* CarWashDetailsVc.swift in Sources */,
 				0645E6F925FE679000D661CC /* RegisterVC.swift in Sources */,
@@ -1607,6 +1733,7 @@
 				0650C1AD25D42BB5008BF0B6 /* MyCart.swift in Sources */,
 				065ACF6025D2A7CB0007AAA5 /* BrandsVC.swift in Sources */,
 				065ACF4825D2A0450007AAA5 /* FavouriteVC.swift in Sources */,
+				06C1EFB726035BB100D34EEE /* EntrerMobileVC.swift in Sources */,
 				065ACF3325D2919F0007AAA5 /* ExploreAllVC.swift in Sources */,
 				065AF27825C01AE2002E7B18 /* Offers.swift in Sources */,
 				06FE9B6E25FA478C00580C3F /* CheckUserExistenceRequest.swift in Sources */,
@@ -1615,12 +1742,17 @@
 				06D7F4F525BF2AD600CF0375 /* TriangleView.swift in Sources */,
 				065ACF4B25D2A0760007AAA5 /* FAQsVC.swift in Sources */,
 				062916B725FF5F3F0068922E /* UserToRegister.swift in Sources */,
+				067FC5B22603A81F000AF744 /* AllWinchesResponse.swift in Sources */,
 				06D7F4EE25BF2AD600CF0375 /* UISearchBar.swift in Sources */,
 				06C66A2925CABB1300BD9A96 /* MyServicesTableViewCell.swift in Sources */,
 				06496F1925C96867008E9D8E /* CategoryCollectionViewCell.swift in Sources */,
 				065AF27A25C01AE2002E7B18 /* HomeOffers.swift in Sources */,
 				065AF28B25C01C15002E7B18 /* SettingsSinglton.swift in Sources */,
+				06F74F9F2601FD2800461401 /* CarModel.swift in Sources */,
+				06F74FA72602109C00461401 /* AddNewCarPresenter.swift in Sources */,
+				06C1EFBA26035CAA00D34EEE /* EnterMobilePresenter.swift in Sources */,
 				06EF7E3325D155E900295993 /* CartItemCollectionViewCell.swift in Sources */,
+				06E6DEB326025280009299E7 /* EditProfileRequest.swift in Sources */,
 				065ACF4525D2A00E0007AAA5 /* EmailUsVC.swift in Sources */,
 				065AF27C25C01AE2002E7B18 /* Filter.swift in Sources */,
 				065AF27925C01AE2002E7B18 /* NearestOffer.swift in Sources */,
@@ -1629,14 +1761,18 @@
 				06C5166225CAFA4C001F4E14 /* ServicesOnMapVC.swift in Sources */,
 				064FCC852600E8EF00789CB8 /* ExploreAllPresenters.swift in Sources */,
 				06640CAB25FE2D37001E5322 /* LoginPresenter.swift in Sources */,
+				06C1EFC72603661600D34EEE /* ResetPasswordRequest.swift in Sources */,
 				06D7103D25CC2914009F5FE0 /* DLRadioButton.m in Sources */,
+				06F74F9C2601FAD400461401 /* GetUserGarageRequest.swift in Sources */,
 				065AF27D25C01AE2002E7B18 /* FilterResponse.swift in Sources */,
 				06A7028A2600D1F400856674 /* SearchCategoriesRequest.swift in Sources */,
 				065AF26225C01AA1002E7B18 /* Helper.swift in Sources */,
-				0600C5EC25FF79930071B05C /* BrandsResponse.swift in Sources */,
+				0600C5EC25FF79930071B05C /* CarDataResponseResponse.swift in Sources */,
 				06C2066725D04F1C004D6A11 /* ChatToTableViewCell.swift in Sources */,
+				067FC5AC2603A72D000AF744 /* GetAllWinchesRequest.swift in Sources */,
 				065AF27525C01AE2002E7B18 /* SearchResult.swift in Sources */,
 				0601805025D2AB9B0067A718 /* BrandsColectionViewCell.swift in Sources */,
+				06F74FB426022B5500461401 /* NotificationsResponse.swift in Sources */,
 				0600C63E25FFAEF20071B05C /* CategoriesResponse.swift in Sources */,
 				0650C1D625D43407008BF0B6 /* NotificationsVC.swift in Sources */,
 				06D7F4F425BF2AD600CF0375 /* UILabel.swift in Sources */,
@@ -1655,28 +1791,31 @@
 				06E5A7A425D18DE5000CB20F /* MyGarageCollectionViewCell.swift in Sources */,
 				0650C1CD25D43367008BF0B6 /* PaymentVC.swift in Sources */,
 				065ACF4E25D2A08E0007AAA5 /* SettingsVC.swift in Sources */,
+				06E6DE9726024DED009299E7 /* CreateResetPasswordCodeRequest.swift in Sources */,
 				06FE9B3F25FA462B00580C3F /* URLS.swift in Sources */,
 				06D7F4ED25BF2AD600CF0375 /* view.swift in Sources */,
 				06D7F4F125BF2AD600CF0375 /* String.swift in Sources */,
 				06D7F48C25BED34C00CF0375 /* SceneDelegate.swift in Sources */,
-				0600C5F525FF7F810071B05C /* CarYearsResponse.swift in Sources */,
+				06C1EFBD260362B900D34EEE /* EnterVerificationCodeVC.swift in Sources */,
 				0667CD2F2600ACDC00D92C83 /* RegisterResponse.swift in Sources */,
 				0645E6FC25FE69E800D661CC /* ContinueRegisterPresenter.swift in Sources */,
 				065AF28925C01C15002E7B18 /* PostMessageResponse.swift in Sources */,
 				065AF27725C01AE2002E7B18 /* OfferDetails.swift in Sources */,
+				06F74FB0260229D700461401 /* GetUserNotificationsRequest.swift in Sources */,
 				0600C5E125FF77800071B05C /* GetCarsBrandsRequest.swift in Sources */,
 				0600C63A25FFAD460071B05C /* CategoriesPresenter.swift in Sources */,
 				065ACF5125D2A0FE0007AAA5 /* TermsAndConditionsVC.swift in Sources */,
 				06D7102125CC0E8B009F5FE0 /* CarHelpVC.swift in Sources */,
-				0600C5F125FF7EB20071B05C /* ModelsResponse.swift in Sources */,
 				06496F1F25C96B67008E9D8E /* CollectionViewCell.swift in Sources */,
 				0614FE6B25C030BB00A3A6C0 /* ChooseServiceVC.swift in Sources */,
+				06F74FA32601FE1E00461401 /* GaragePresenter.swift in Sources */,
 				065AF26525C01AB1002E7B18 /* Toast.swift in Sources */,
 				06B9FDF825D2DCE300CCFF6F /* CenterServicesCollectionViewCell.swift in Sources */,
 				0698B1B925C165F9005E0191 /* Photo.swift in Sources */,
 				0601804F25D2AB9B0067A718 /* BannersCollectionViewCell.swift in Sources */,
 				06D7F4F225BF2AD600CF0375 /* UIButton.swift in Sources */,
 				065AF27E25C01AE2002E7B18 /* ConfirmOfferResponse.swift in Sources */,
+				06F74FAA26021A7600461401 /* AddUserCarRequest.swift in Sources */,
 				0608D06F25ECF2AE006F3349 /* PannersCollectionViewCell.swift in Sources */,
 				0645E6E425FE591300D661CC /* WelcomeVC.swift in Sources */,
 				065ACF5425D2A10F0007AAA5 /* PrivacyPolicyVC.swift in Sources */,

@@ -9,7 +9,7 @@ import Foundation
 
 final class GetCarYearsRequest: Requestable {
     
-    typealias ResponseType = CarYearssResponse
+    typealias ResponseType = CarData
     
     private var brand: String
     private var model: String

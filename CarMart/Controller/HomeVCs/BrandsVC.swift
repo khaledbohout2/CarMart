@@ -32,8 +32,8 @@ class BrandsVC: UIViewController {
     let layout = CollectionViewPagingLayout()
     
     
-    var brands = [Brand]()
-    var featuredBrands = [Brand]()
+    var brands = [String]()
+    var featuredBrands = [String]()
     var scrollIndex = 0
     
     //MARK: - view life cycle

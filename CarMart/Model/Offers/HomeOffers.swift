@@ -14,7 +14,7 @@ import Foundation
 struct HomeOffers: Codable {
     
     var populerOffers, freeOffers, paidOffers: [OfferModel]?
-    var featured: [Brand]?
+    var featured: [String]?
     var photos: [String]?
 
     enum CodingKeys: String, CodingKey {

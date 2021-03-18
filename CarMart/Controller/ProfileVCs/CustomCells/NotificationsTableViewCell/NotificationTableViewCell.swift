@@ -18,16 +18,16 @@ class NotificationTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-//    func configureCell(notification: NotificationModel) {
-//        
-//        self.notificationTitleLbl.text = notification.title
-//        self.notificationDateLbl.setLocalization()
-//        
-//        self.notificationContentLbl.text = notification.notificationDescription
-//        self.notificationContentLbl.setLocalization()
-//        
-//        self.notificationDateLbl.text = notification.updatedAt
-//        self.notificationDateLbl.setLocalization()
-//    }
+    func configureCell(notification: NotificationModel) {
+        
+        self.notificationTitleLbl.text = notification.title
+        self.notificationDateLbl.setLocalization()
+        
+        self.notificationContentLbl.text = notification.notificationDescription
+        self.notificationContentLbl.setLocalization()
+        
+        self.notificationDateLbl.text = notification.updatedAt
+        self.notificationDateLbl.setLocalization()
+    }
     
 }

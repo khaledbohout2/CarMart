@@ -73,7 +73,7 @@ extension MaintainingCenteresVC: UICollectionViewDelegate, UICollectionViewDataS
         
         let storiBoard = UIStoryboard(name: "Item", bundle: nil)
         let maintainingCenterVC = storiBoard.instantiateViewController(withIdentifier: "MaintainingCenterVC") as! MaintainingCenterVC
-        self.navigationController?.pushViewController(maintainingCenterVC, animated: true)
+        self.present(maintainingCenterVC, animated: true, completion: nil)
     }
 }
 

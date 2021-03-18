@@ -17,7 +17,7 @@ class FeatureBrandsCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func configureCell(brand: Brand, color: String) {
+    func configureCell(brand: String, color: String) {
         
 //        self.brandImageView.sd_setImage(with: URL(string: (SharedSettings.shared.settings?.setting?.usersPhotoLink ?? "") + "/" + (brand.photoLink ?? "")), placeholderImage: UIImage(named: "placeholder"), options: [.fromLoaderOnly])
         

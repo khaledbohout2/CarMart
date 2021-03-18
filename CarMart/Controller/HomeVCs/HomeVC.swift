@@ -36,7 +36,7 @@ class HomeVC: UIViewController {
     var freeOffers = [OfferModel]()
     var paidOffers = [OfferModel]()
     var hotOffers = [OfferModel]()
-    var brands = [Brand]()
+    var brands = [String]()
     var pannersArr = [String]()
     var categoryIndex = "1"
     

@@ -149,9 +149,14 @@ class CategoriesVC: UIViewController {
             
             if indexPath.row == 0 {
                 
+//                let storiBoard = UIStoryboard(name: "Home", bundle: nil)
+//                let maintainingCenteresVC = storiBoard.instantiateViewController(withIdentifier: "WinchListVC") as! WinchListVC
+//                self.present(maintainingCenteresVC, animated: true, completion: nil)
+                
                 let storiBoard = UIStoryboard(name: "Home", bundle: nil)
-                let maintainingCenteresVC = storiBoard.instantiateViewController(withIdentifier: "WinchListVC") as! WinchListVC
-                self.navigationController?.pushViewController(maintainingCenteresVC, animated: true)
+                let maintainingCenteresVC = storiBoard.instantiateViewController(withIdentifier: "MaintainingCenteresVC") as! MaintainingCenteresVC
+                maintainingCenteresVC.modalPresentationStyle = .fullScreen
+                self.present(maintainingCenteresVC, animated: true, completion: nil)
                 
             } else if indexPath.row == 1 {
                 

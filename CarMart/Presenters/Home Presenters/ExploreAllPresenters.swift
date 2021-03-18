@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ExploreAllDelegate {
+protocol ExploreAllDelegate: class {
     
     func getAllSpecificationsSuccess(success: Bool)
     func passAllSpecifications(specs: [Specification])
@@ -15,7 +15,7 @@ protocol ExploreAllDelegate {
 
 class ExploreAllPresenters {
     
-    var delegate: ExploreAllDelegate?
+    weak var delegate: ExploreAllDelegate?
     
     func getAllSpecifications(req: GetAllSpeceficationsRequest) {
         

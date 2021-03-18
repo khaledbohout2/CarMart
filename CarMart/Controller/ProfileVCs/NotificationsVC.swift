@@ -6,10 +6,21 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class NotificationsVC: UIViewController {
     
     @IBOutlet weak var notificationsTableView: UITableView!
+    
+    let notificationsPresenter = NotificationsPresenter()
+    
+    var hud = JGProgressHUD(style: .extraLight)
+    
+    var notificationsArr = [NotificationModel]()
+    
+    var getNext = false
+    
+    var page = 0
     
     //MARK: - Vars
     
@@ -22,6 +33,7 @@ class NotificationsVC: UIViewController {
 
         setUpNavigation()
         setUpTableView()
+        notificationsPresenter.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -31,6 +43,7 @@ class NotificationsVC: UIViewController {
       - Parameters :
       - zero parameters
       */
+
     
     func setUpNavigation() {
         
@@ -43,6 +56,7 @@ class NotificationsVC: UIViewController {
             appearance.backgroundColor = hexStringToUIColor(hex: "#204BF6")
             appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
          //   appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            
 
             navigationController?.navigationBar.tintColor = .white
             navigationController?.navigationBar.standardAppearance = appearance
@@ -51,7 +65,7 @@ class NotificationsVC: UIViewController {
             
         } else {
             // Fallback on earlier versions
-                self.navigationController?.navigationBar.backgroundColor = hexStringToUIColor(hex: "#204BF6")
+                self.navigationController?.navigationBar.backgroundColor = hexStringToUIColor(hex: "#F4F6F8")
         }
 
 
@@ -64,16 +78,18 @@ class NotificationsVC: UIViewController {
         }
 //
 
-            self.navigationItem.title = "notifications".localizableString()
+    //        self.navigationItem.title = "notifications".localizableString()
             self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: hexStringToUIColor(hex: "#FFFFFF"),
                                                                             NSAttributedString.Key.font: UIFont(name: "Poppins-Regular".localizableString(), size: fontSize)!]
-
-
         
-//        let backBtn = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(backTapped))
-//        backBtn.image = UIImage(named: "ArrowLeft".localizableString())
-//        backBtn.tintColor = hexStringToUIColor(hex: "#000000")
-//        navigationItem.leftBarButtonItem = backBtn
+        self.title = "Notifications"
+        
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        
+        let back = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(backTapped))
+        back.image = UIImage(named: "ArrowLeft".localizableString())
+        back.tintColor = hexStringToUIColor(hex: "#FFFFFF")
+        navigationItem.leftBarButtonItem = back
         
     }
     
@@ -96,6 +112,24 @@ class NotificationsVC: UIViewController {
         
     }
     
+    func getNotifications() {
+        
+        
+        
+        if Reachable.isConnectedToNetwork() {
+            
+            hud.textLabel.text = "loading"
+            hud.show(in: self.view)
+            
+            self.notificationsPresenter.getNotifications(req: GetUserNotificationsRequest())
+            
+        } else {
+            
+            hud.dismiss()
+            Toast.show(message: "No Internet", controller: self)
+        }
+    }
+    
     //MARK: - IBActions
     
     /**
@@ -115,6 +149,16 @@ class NotificationsVC: UIViewController {
         
     }
     
+    /**
+           this IBAction calls when user tapps back button which pop view controller
+           - Parameters:
+           - sender : the button that intiate the action.
+           */
+    
+    @objc func backTapped() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 
 
 }
@@ -123,11 +167,7 @@ extension NotificationsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-    //    print(notificationsArr.count)
-        
-      //  return notificationsArr.count
-        
-        return 3
+        return notificationsArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -149,7 +189,8 @@ extension NotificationsVC: UITableViewDelegate, UITableViewDataSource {
 //        } else {
         
         let cell = notificationsTableView.dequeueReusableCell(withIdentifier: "NotificationTableViewCell", for: indexPath) as! NotificationTableViewCell
-           // cell.configureCell(notification: notif)
+        let notif = notificationsArr[indexPath.row]
+            cell.configureCell(notification: notif)
         return cell
             
       //  }
@@ -170,12 +211,46 @@ extension NotificationsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-//        if indexPath.row == self.notificationsArr.count - 1 {
-//            if index < noOfPages! + 1 {
-//            index += 1
-//        //    getNotification()
-//            }
-//        }
+        if indexPath.row == self.notificationsArr.count - 1 {
+            if getNext {
+            
+                getNotifications()
+            }
+        }
+    }
+    
+    
+}
+
+extension NotificationsVC: NotificationsDelegate {
+    
+    func getnotificationsSuccess(success: Bool) {
+        if success {
+            
+            hud.dismiss()
+            
+        } else {
+            
+            hud.dismiss()
+            
+            Toast.show(message: "some error happened, please try again later", controller: self)
+        }
+    }
+    
+    func passUserNotificatios(notification: NotificationsResponse) {
+        
+        self.notificationsArr = notification.notifications
+        self.notificationsTableView.reloadData()
+        if notification.nextPageURL != nil {
+            
+            page += 1
+            getNext = true
+            
+        } else {
+            
+            getNext = false
+        }
+        
     }
     
     

@@ -268,12 +268,9 @@ extension ContinueRegisterVC: ContinueRegisterDelegate {
         }
     }
     
-    func passCarBrands(brands: [Brand]) {
-        
-        for element in brands {
-            
-            self.brandsArr.append(element.brand)
-        }
+    func passCarBrands(brands: [String]) {
+
+        self.brandsArr = brands
         
         setUpCarDropDown()
         
@@ -292,12 +289,9 @@ extension ContinueRegisterVC: ContinueRegisterDelegate {
         }
     }
     
-    func passCarModels(models: [Model]) {
-        
-        for element in models {
-            
-            self.modelsArr.append(element.model)
-        }
+    func passCarModels(models: [String]) {
+
+        self.modelsArr = models
         
         setUpModelDropDown()
     }
@@ -315,12 +309,9 @@ extension ContinueRegisterVC: ContinueRegisterDelegate {
         }
     }
     
-    func passCarYears(years: [Year]) {
+    func passCarYears(years: [String]) {
         
-        for element in years {
-            
-            self.yearsArr.append(element.year)
-        }
+        self.yearsArr = years
         
         setUpYearDropDown()
     }

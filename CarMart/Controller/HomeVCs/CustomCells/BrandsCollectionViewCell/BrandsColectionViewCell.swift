@@ -16,7 +16,7 @@ class BrandsColectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func configureCell(brand: Brand) {
+    func configureCell(brand: String) {
         let baseUrl = SharedSettings.shared.settings?.setting?.usersPhotoLink ?? ""
 //        let imageUrl = brand.photoLink ?? ""
 //        let url = URL(string: baseUrl + "/" + imageUrl)

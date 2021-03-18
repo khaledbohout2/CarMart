@@ -24,7 +24,7 @@ class HomeTCB: UIViewController {
         
         let testController = BATabBarController()
         testController.tabBarBackgroundColor = UIColor.white
-   //     testController.tabBarItemStrokeColor = hexStringToUIColor(hex: "#1550C0")
+        testController.tabBarItemStrokeColor = hexStringToUIColor(hex: "#1550C0")
         var tabBarItem, tabBarItem2, tabBarItem3, tabBarItem4 : BATabBarItem
         
         
@@ -32,16 +32,16 @@ class HomeTCB: UIViewController {
         case .BATabBarWithText:
             let option1 = NSMutableAttributedString(string: "Feed")
             option1.addAttribute(.foregroundColor, value: UIColor.white, range: NSRange(location: 0, length: option1.length))
-            tabBarItem  = BATabBarItem(image: UIImage(named: "icon1_unselected")!, selectedImage: UIImage(named: "icon1_selected")!, title: option1)
-            tabBarItem2 = BATabBarItem(image: UIImage(named: "icon2_unselected")!, selectedImage: UIImage(named: "icon2_selected")!, title: option1)
-            tabBarItem3 = BATabBarItem(image: UIImage(named: "icon3_unselected")!, selectedImage: UIImage(named: "icon3_selected")!, title: option1)
-            tabBarItem4 = BATabBarItem(image: UIImage(named: "Group 67025")!, selectedImage: UIImage(named: "Group 67025")!, title: option1)
+            tabBarItem  = BATabBarItem(image: UIImage(named: "Home-Gray")!, selectedImage: UIImage(named: "Home")!, title: option1)
+            tabBarItem2 = BATabBarItem(image: UIImage(named: "Cart-gray")!, selectedImage: UIImage(named: "Cart")!, title: option1)
+            tabBarItem3 = BATabBarItem(image: UIImage(named: "Location-Gray")!, selectedImage: UIImage(named: "Location")!, title: option1)
+            tabBarItem4 = BATabBarItem(image: UIImage(named: "profile-Gray")!, selectedImage: UIImage(named: "profile")!, title: option1)
 
         case .BATabBarNoText:
-            tabBarItem  = BATabBarItem(image: UIImage(named: "icon1_unselected")!, selectedImage: UIImage(named: "icon1_selected")!)
-            tabBarItem2 = BATabBarItem(image: UIImage(named: "icon2_unselected")!, selectedImage: UIImage(named: "icon2_selected")!)
-            tabBarItem3 = BATabBarItem(image: UIImage(named: "icon3_unselected")!, selectedImage: UIImage(named: "icon3_selected")!)
-            tabBarItem4 = BATabBarItem(image: UIImage(named: "Group 67025")!, selectedImage: UIImage(named: "Group 67025")!)
+            tabBarItem  = BATabBarItem(image: UIImage(named: "Home-Gray")!, selectedImage: UIImage(named: "Home")!)
+            tabBarItem2 = BATabBarItem(image: UIImage(named: "Cart-gray")!, selectedImage: UIImage(named: "Cart")!)
+            tabBarItem3 = BATabBarItem(image: UIImage(named: "Location-gray")!, selectedImage: UIImage(named: "Location")!)
+            tabBarItem4 = BATabBarItem(image: UIImage(named: "profile-Gray")!, selectedImage: UIImage(named: "profile")!)
         }
         
 

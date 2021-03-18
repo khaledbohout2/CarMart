@@ -6,24 +6,56 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
+import JGProgressHUD
 
 class EditProfileVC: UIViewController {
 
+    @IBOutlet weak var nameTextField: SkyFloatingLabelTextField!
+    
+    @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
+    
+    @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
+    
+    @IBOutlet weak var phoneTextField: SkyFloatingLabelTextField!
+    
+    var hud = JGProgressHUD(style: .extraLight)
+    
+    var editProfilePresenter = EditProfilePresenters()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        editProfilePresenter.delegate = self
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveBtnTapped(_ sender: Any) {
+        
+     //   self.editProfilePresenter.editProfile(req: <#T##EditProfileRequest#>)
     }
-    */
+    
+    func updateUI() {
+        
+    }
+    
+}
 
+extension EditProfileVC: EditProfileDelegate {
+    
+    func editProfileSuccess(success: Bool) {
+        
+        if success {
+            
+            hud.dismiss()
+            
+        } else {
+            
+            hud.dismiss()
+            Toast.show(message: "some error happened, please try again", controller: self)
+        }
+    }
+    
+    
+    
 }

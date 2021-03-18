@@ -9,7 +9,7 @@ import Foundation
 
 final class GetCarsBrandsRequest: Requestable {
     
-    typealias ResponseType = BrandsResponse
+    typealias ResponseType = CarData
     
     init() {
         
